@@ -72,19 +72,29 @@ class ProfileEditPageView extends GetView<ProfileMainPageController> {
               SizedBox(height: 14.h),
               // Centered Text (Name)
               Center(
+<<<<<<< HEAD
                 child: Obx(() => Text(
                   controller.comNameVal.value,
+=======
+                child: Text(
+                 controller.comNameVal.value,
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                   style: StaticStyle.style(
                     20.sp,  // Using ScreenUtil for text scaling
                     StaticColors.textPrColor,
                     FontWeight.w600,
                   ),
+<<<<<<< HEAD
                 ),)
+=======
+                ),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
               ),
 
               SizedBox(height: 50.h),
 
               // ProfileEditForm (Custom Widget)
+<<<<<<< HEAD
               ProfileEditFrom(
                 comName: comName,
                 phoneNumber: phoneNum,
@@ -92,6 +102,9 @@ class ProfileEditPageView extends GetView<ProfileMainPageController> {
                 webSite: webSite,
                 comAdd: address,
               ),
+=======
+              ProfileEditFrom(comName: comName, phoneNumber: phoneNum, emailAdd: email, webSite: webSite, comAdd: address,),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 
               SizedBox(height: 50.h),
 
@@ -105,12 +118,20 @@ class ProfileEditPageView extends GetView<ProfileMainPageController> {
                 bgColor: StaticColors.itemBgColor1,
                 fColor: StaticColors.whiteColor,
                 onTap: () {
+<<<<<<< HEAD
               controller.saveOnTap();
                  ShowDialog.showCustomDialog(
                     context,
                     heading: 'Successfully Update Profile',
                     seBtnTitle: 'Ok',
                     onTap2: () => Get.toNamed(Routes.PROFILE_MAIN_PAGE),
+=======
+                  ShowDialog.showCustomDialog(
+                    context,
+                    heading: 'Successfully Update Profile',
+                    seBtnTitle: 'Ok',
+                    onTap2: () => Get.toNamed(Routes.MAIN_PAGE),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                     onlySuccesMsg: true,
                     isSuccess: true,
                   );

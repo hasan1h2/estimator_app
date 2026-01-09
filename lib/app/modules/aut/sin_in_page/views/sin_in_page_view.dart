@@ -47,7 +47,11 @@ class SinInPageView extends GetView<SinInPageController> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       TextButton(
+<<<<<<< HEAD
                         onPressed: () => Get.toNamed(Routes.FORGOT_PASS_PAGE,),
+=======
+                        onPressed: () => Get.toNamed(Routes.FORGOT_PASS_PAGE),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                         child: Text(StaticString.forPass),
                       ),
                     ],

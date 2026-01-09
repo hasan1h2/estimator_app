@@ -14,8 +14,13 @@ class UseGuideMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Container(
       padding: EdgeInsets.symmetric(horizontal: 2, vertical: 20),
+<<<<<<< HEAD
       margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       height: 500.h,
+=======
+      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      height: 350.h,
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
       width: 392.w,
       decoration: BoxDecoration(
         color: Color(StaticColors.whiteColor),
@@ -47,7 +52,10 @@ class UseGuideMain extends StatelessWidget {
           SizedBox(height: 10.h),
           Expanded(
             child: ListView.builder(
+<<<<<<< HEAD
               physics: NeverScrollableScrollPhysics(),
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
               itemCount: StaticString.UseGuideval.length,
               itemBuilder: (context, index) => UseGuideOp(
                 opNumber: index + 1,

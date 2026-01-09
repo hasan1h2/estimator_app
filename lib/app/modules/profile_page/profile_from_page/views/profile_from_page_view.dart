@@ -5,6 +5,7 @@ import 'package:estimatorapp/app/data/utils/static_style/staticstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import '../../../../routes/app_pages.dart';
 import '../../../global_widget/custom_button/custom_button.dart';
 import '../../../global_widget/custom_upload_filebox/custom_upload_filebox.dart';
@@ -15,6 +16,15 @@ import '../controllers/profile_from_page_controller.dart';
 import '../inner_widget/profile_from.dart';
 
 class ProfileFromPageView extends GetView<ProfileMainPageController> {
+=======
+import '../../../global_widget/custom_button/custom_button.dart';
+import '../../../global_widget/custom_upload_filebox/custom_upload_filebox.dart';
+import '../../../global_widget/nav_bar/nav_bar_main.dart';
+import '../controllers/profile_from_page_controller.dart';
+import '../inner_widget/profile_from.dart';
+
+class ProfileFromPageView extends GetView<ProfileFromPageController> {
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
   const ProfileFromPageView({super.key});
   @override
   Widget build(BuildContext context) {
@@ -23,9 +33,13 @@ class ProfileFromPageView extends GetView<ProfileMainPageController> {
         body: Padding(
           padding: const EdgeInsets.all(26),
           child: SingleChildScrollView(
+<<<<<<< HEAD
             child: Form(
                 key: controller.formKey,
                 child: Column(
+=======
+            child: Column(
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
               crossAxisAlignment: .start,
               mainAxisAlignment: .start,
               children: [
@@ -106,6 +120,7 @@ class ProfileFromPageView extends GetView<ProfileMainPageController> {
                 CustomButton(
                   bgColor: StaticColors.btnColor,
                   fColor: StaticColors.whiteColor,
+<<<<<<< HEAD
                   onTap: () {
 
                     controller.saveOnTapProfrom()?ShowDialog.showCustomDialog(
@@ -122,6 +137,13 @@ class ProfileFromPageView extends GetView<ProfileMainPageController> {
                 )
               ],
             )),
+=======
+                  onTap: () {},
+                  title: StaticString.sComBtn,height: 48,
+                )
+              ],
+            ),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           ),
         ),
       ),

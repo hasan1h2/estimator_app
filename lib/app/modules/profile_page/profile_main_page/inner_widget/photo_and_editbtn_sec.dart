@@ -6,9 +6,13 @@ import '../../../../data/utils/static_colors/static_colors.dart';
 import '../../../../data/utils/static_img/static_img.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
 import '../../../../routes/app_pages.dart';
+<<<<<<< HEAD
 import '../../../global_widget/show_dialog/show_dialog.dart';
 import '../controllers/profile_main_page_controller.dart';
 
+=======
+import '../controllers/profile_main_page_controller.dart';
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
   const PhotoAndEditbtnSec({super.key});
   @override
@@ -54,6 +58,7 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
             ],
           ),
           SizedBox(height: 14.h),
+<<<<<<< HEAD
           Obx(
             () => Text(
               controller.comNameVal.value,
@@ -62,11 +67,20 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
                 StaticColors.textPrColor,
                 FontWeight.w600,
               ),
+=======
+          Text(
+            controller.comNameVal.value,
+            style: StaticStyle.style(
+              20.sp, // Using ScreenUtil for text scaling
+              StaticColors.textPrColor,
+              FontWeight.w600,
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
             ),
           ),
           SizedBox(height: 10.h),
           SizedBox(
             width: 160.w,
+<<<<<<< HEAD
             child: ElevatedButton(
               onPressed: () {
                 ShowDialog.showCustomDialog(
@@ -97,10 +111,29 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
               },
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 12.h),
+=======
+           child:  ElevatedButton(
+              onPressed: () {
+                // Edit Profile
+                Get.toNamed(Routes.PROFILE_EDIT_PAGE, arguments: {
+                  'comName': controller.comNameVal.value,
+                  'email': controller.emailVal.value,
+                  'phoneNum': controller.phoneNumVal.value,
+                  'address': controller.addressVal.value,
+                  'webSite': controller.webSiteVal.value,
+                });
+              },
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 30.w,
+                  vertical: 12.h,
+                ),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                 backgroundColor: Color(StaticColors.itemBgColor1),
               ),
               child: Row(
                 children: [
+<<<<<<< HEAD
                   Text(
                     'Edit Profile',
                     style: StaticStyle.style(
@@ -109,6 +142,13 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
                       FontWeight.w600,
                     ),
                   ),
+=======
+                  Text('Edit Profile', style: StaticStyle.style(
+                    14.sp,
+                    StaticColors.whiteColor,
+                    FontWeight.w600,
+                  ),),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                   SizedBox(width: 10.w),
                   SvgPicture.asset(
                     StaticImg.edit,
@@ -122,6 +162,10 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
                 ],
               ),
             ),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           ),
         ],
       ),

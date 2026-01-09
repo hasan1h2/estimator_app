@@ -17,7 +17,11 @@ class QuestionsBoxMain extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 2, vertical: 20),
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+<<<<<<< HEAD
       height: MediaQuery.of(context).size.height*.25,
+=======
+      height: 200.h,
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
       width: 392.w,
       decoration: BoxDecoration(
         color: Color(StaticColors.whiteColor),
@@ -44,7 +48,10 @@ class QuestionsBoxMain extends StatelessWidget {
           ),
           SizedBox(height: 10.h),
           Expanded(
+<<<<<<< HEAD
             flex: 3,
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
             child: ListView.builder(
               itemCount: StaticString.questionsVal.length,
               itemBuilder: (context, index) => QuestionsBox(

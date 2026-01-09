@@ -8,7 +8,10 @@ import '../../../../data/utils/static_img/static_img.dart';
 import '../../../../data/utils/static_string/static_string.dart';
 import '../../../../routes/app_pages.dart';
 import '../../../global_widget/custom_button/custom_button.dart';
+<<<<<<< HEAD
 import '../../../global_widget/show_dialog/show_dialog.dart';
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 import '../controllers/success_page_controller.dart';
 
 class SuccessPageView extends GetView<SuccessPageController> {
@@ -48,6 +51,7 @@ class SuccessPageView extends GetView<SuccessPageController> {
               CustomButton(
                 bgColor: StaticColors.btnColor,
                 fColor: StaticColors.whiteColor,
+<<<<<<< HEAD
                 onTap: () {
                   ShowDialog.showCustomDialog(
                     context,
@@ -60,6 +64,9 @@ class SuccessPageView extends GetView<SuccessPageController> {
                     lotiImg: StaticImg.editLoti,
                   );
                   },
+=======
+                onTap: () { Get.toNamed(Routes.MAIN_PAGE);},
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                 title: StaticString.continueBtn,
               )
             ],

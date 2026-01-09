@@ -12,7 +12,10 @@ class QuestionsBox extends StatelessWidget {
     required this.questionsDec,
     required this.selectIndex,
   });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
   final dynamic controller;
   final String questionsTitle;
   final String questionsDec;
@@ -20,15 +23,19 @@ class QuestionsBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     // Retrieve the showMore value from the map dynamically
     RxBool getShowMore() {
       return controller.showMoreMap[selectIndex] ?? false.obs;  // Default to false if not found
     }
 
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
     return SingleChildScrollView(
       child: Column(
         children: [
           GestureDetector(
+<<<<<<< HEAD
             onTap: () {
               // Toggle the appropriate section based on selectIndex
               controller.toggleMore(selectIndex);
@@ -37,6 +44,13 @@ class QuestionsBox extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
               child: Obx(
                     () => Row(
+=======
+            onTap: () => controller.toggleMore(),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+              child: Obx(
+                () => Row(
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
@@ -48,7 +62,11 @@ class QuestionsBox extends StatelessWidget {
                       ),
                     ),
                     Icon(
+<<<<<<< HEAD
                       getShowMore().value
+=======
+                      controller.showMore.value
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                           ? Icons.keyboard_arrow_up
                           : Icons.keyboard_arrow_down,
                     ),
@@ -57,6 +75,7 @@ class QuestionsBox extends StatelessWidget {
               ),
             ),
           ),
+<<<<<<< HEAD
 
           Obx(() {
             if (getShowMore().value) {
@@ -72,6 +91,21 @@ class QuestionsBox extends StatelessWidget {
               return const SizedBox();  // Return an empty box if not expanded
             }
           }),
+=======
+      
+          Obx(
+            () => controller.showMore.value
+                ? Text(
+                  questionsDec,
+                  style: StaticStyle.style(
+                    11.9,
+                    StaticColors.grayColor,
+                    FontWeight.w400,
+                  ),
+                )
+                : const SizedBox(),
+          ),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
         ],
       ),
     );

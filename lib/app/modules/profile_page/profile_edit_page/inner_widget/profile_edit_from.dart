@@ -15,7 +15,10 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
     required this.webSite,
     required this.comAdd,
   });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
   final String comName;
   final String phoneNumber;
   final String emailAdd;
@@ -24,6 +27,7 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     // Initializing the controllers with values from the passed arguments
     controller.comNameCtrl.value.text = comName;
     controller.phoneNumCtrl.value.text = phoneNumber;
@@ -37,6 +41,12 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
           onChanged: (value) {
             controller.comNameVal.value = value; // Updating the reactive variable
           },
+=======
+    return Column(
+      children: [
+        CustomTeFromBo(
+          initialValue: comName,
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           mainController: controller.comNameCtrl.value,
           hintText: StaticString.comHint,
           borderColor: StaticColors.grayColor,
@@ -48,9 +58,13 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
         ),
         SizedBox(height: 10),
         CustomTeFromBo(
+<<<<<<< HEAD
           onChanged: (value) {
             controller.phoneNumVal.value = value;
           },
+=======
+          initialValue: phoneNumber,
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           mainController: controller.phoneNumCtrl.value,
           hintText: StaticString.phHint,
           borderColor: StaticColors.grayColor,
@@ -62,11 +76,17 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
         ),
         SizedBox(height: 10),
         CustomTeFromBo(
+<<<<<<< HEAD
           onChanged: (value) {
             controller.emailVal.value = value;
           },
           mainController: controller.emailCtrl.value,
           readOnly: true, // Email field is read-only
+=======
+          initialValue: emailAdd,
+          mainController: controller.emailCtrl.value,
+          readOnly: true,
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           hintText: StaticString.emHint,
           borderColor: StaticColors.grayColor,
           borderWidth: 1,
@@ -77,9 +97,13 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
         ),
         SizedBox(height: 10),
         CustomTeFromBo(
+<<<<<<< HEAD
           onChanged: (value) {
             controller.webSiteVal.value = value;
           },
+=======
+          initialValue: webSite,
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           mainController: controller.webSiteCtrl.value,
           hintText: StaticString.webHint,
           borderColor: StaticColors.grayColor,
@@ -91,9 +115,13 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
         ),
         SizedBox(height: 10),
         CustomTeFromBo(
+<<<<<<< HEAD
           onChanged: (value) {
             controller.addressVal.value = value;
           },
+=======
+          initialValue: comAdd,
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           mainController: controller.addressCtrl.value,
           hintText: StaticString.comAddHint,
           borderColor: StaticColors.grayColor,
@@ -108,4 +136,7 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
     );
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840

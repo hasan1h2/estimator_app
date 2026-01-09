@@ -13,9 +13,15 @@ class SplashPageView extends GetView<SplashPageController> {
   const SplashPageView({super.key});
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return SafeArea(
       child: Scaffold(
         body: Padding(
+=======
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
             physics: NeverScrollableScrollPhysics(),
@@ -31,7 +37,11 @@ class SplashPageView extends GetView<SplashPageController> {
                   ),
                   child: Image.asset(StaticImg.sploginba),
                 ),
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                 // -------------------CustomButton--------SinUp------------
                 CustomButton(
                   bgColor: StaticColors.btnColor,
@@ -64,10 +74,17 @@ class SplashPageView extends GetView<SplashPageController> {
                 isIconColor: true,
                 ),
                 SizedBox(height: 17),
+<<<<<<< HEAD
 
                 // -------------------CustomButton--Apple------------------
 
 
+=======
+            
+                // -------------------CustomButton--Apple------------------
+            
+            
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                 CustomButton(
                   bgColor: StaticColors.whiteColor,
                   fColor: StaticColors.textSeColor,
@@ -80,7 +97,11 @@ class SplashPageView extends GetView<SplashPageController> {
                   leftIcon: StaticImg.apple,
                   isIconColor: true,
                 ).marginOnly(bottom: 30.w),
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
               ],
             ),
           ),

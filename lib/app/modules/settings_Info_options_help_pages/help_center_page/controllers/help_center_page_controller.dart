@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 class HelpCenterPageController extends GetxController {
+<<<<<<< HEAD
   // Use a map to manage the showMore states dynamically
   RxMap<int, RxBool> showMoreMap = <int, RxBool>{}.obs;
 
@@ -16,4 +17,11 @@ class HelpCenterPageController extends GetxController {
   void toggleMoreTems() {
     showMoreTems.value = !showMoreTems.value;
   }
+=======
+  //TODO: Implement HelpCenterPageController
+
+  void toggleMore() {
+    showMore.value = !showMore.value;
+  } RxBool showMore = false.obs;
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 }

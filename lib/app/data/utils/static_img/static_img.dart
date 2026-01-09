@@ -35,8 +35,11 @@ class StaticImg {
 
   // --------------------------lottie_img---------------------------
   static final String success='$imgbasepathlottie/success.json';
+<<<<<<< HEAD
   static final String deleteLoti='$imgbasepathlottie/delete.json';
   static final String editLoti='$imgbasepathlottie/edit.json';
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 
 
 // --------------------------Png---------------------------

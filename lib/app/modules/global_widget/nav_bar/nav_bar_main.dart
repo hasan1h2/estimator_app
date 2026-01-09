@@ -44,7 +44,11 @@ class NavBarMain extends StatelessWidget {
               if (index == 1) {
                 Get.toNamed(Routes.SETTINGS_PAGE,);
               } if (index == 2) {
+<<<<<<< HEAD
                 Get.toNamed(Routes.PROFILE_MAIN_PAGE );
+=======
+                Get.toNamed(Routes.PROFILE_FROM_PAGE );
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
               }
             },
             child:Obx(() =>  Column(

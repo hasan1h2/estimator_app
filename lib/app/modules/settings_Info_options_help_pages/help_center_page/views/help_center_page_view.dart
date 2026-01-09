@@ -31,11 +31,16 @@ class HelpCenterPageView extends GetView<HelpCenterPageController> {
             children: [
               EstimateTopBgOp(title: StaticString.helpCenter),
               HelpCenterFrom().paddingOnly(
+<<<<<<< HEAD
                 bottom: 25,
+=======
+                bottom: 15,
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                 top: 30,
                 right: 20,
                 left: 20,
               ),
+<<<<<<< HEAD
               Center(
                 child: CustomButton(
                   bgColor: StaticColors.btnSixColor,
@@ -51,6 +56,21 @@ class HelpCenterPageView extends GetView<HelpCenterPageController> {
                   width: 335.w,
                 ),
               ),
+=======
+              CustomButton(
+                bgColor: StaticColors.btnSixColor,
+                fColor: StaticColors.whiteColor,
+                onTap: () {},
+                title: StaticString.savCompInfo,
+                height: 52.h,
+                fWight: FontWeight.w400,
+                isLeftIcon: true,
+                borderRadius: 10,
+                fSize: 13.6,
+                leftIcon: StaticImg.save,
+                width: 335.w,
+              ).paddingSymmetric(horizontal: 20, vertical: 10),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
               // =================How To Use Guide Box================
               FittedBox(child: UseGuideMain()),
               // =================QuestionsBoxMain Box================

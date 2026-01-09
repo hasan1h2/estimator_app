@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 import 'package:estimatorapp/app/data/utils/static_img/static_img.dart';
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_utils/src/extensions/widget_extensions.dart';
 import '../../../../data/utils/static_colors/static_colors.dart';
+<<<<<<< HEAD
 import '../../../../routes/app_pages.dart';
 import '../../../global_widget/custom_button/custom_button.dart';
 import '../../../global_widget/show_dialog/show_dialog.dart';
+=======
+import '../../../global_widget/custom_button/custom_button.dart';
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 import '../controllers/find_customerm_page_controller.dart';
 class CustomerBtn extends StatelessWidget {
   const CustomerBtn({super.key, required this.controlar});
@@ -46,6 +53,7 @@ class CustomerBtn extends StatelessWidget {
               : StaticColors.textPrColor,
           onTap: () {
             controlar.chanceIndex(index);
+<<<<<<< HEAD
             if(index==1){
 
               Get.toNamed(Routes.EDIT_SERVICE_PRODUCT_PAGE);
@@ -78,6 +86,8 @@ class CustomerBtn extends StatelessWidget {
               );
 
             }
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           },
           title: controlar.btnTitle[index]["title"],
           fSize: 10.sp,

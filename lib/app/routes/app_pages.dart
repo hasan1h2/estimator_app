@@ -59,7 +59,11 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
+<<<<<<< HEAD
   static final INITIAL = Routes.SPLASH_PAGE;
+=======
+  static final INITIAL = Routes.PROFILE_MAIN_PAGE;
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
   static final routes = [
     GetPage(
       name: _Paths.SPLASH_PAGE,
@@ -93,10 +97,16 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.PROFILE_FROM_PAGE,
+<<<<<<< HEAD
+=======
+      transition: Transition.rightToLeft,
+      transitionDuration: Duration(milliseconds: 500),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
       page: () => ProfileFromPageView(),
       binding: ProfileFromPageBinding(),
     ),
     GetPage(
+<<<<<<< HEAD
       // transition: Transition.rightToLeft,
       // transitionDuration: Duration(milliseconds: 500),
       name: _Paths.PROFILE_MAIN_PAGE,
@@ -107,13 +117,23 @@ class AppPages {
       name: _Paths.MAIN_PAGE,
       // transition: Transition.rightToLeft,
       // transitionDuration: Duration(milliseconds: 500),
+=======
+      name: _Paths.MAIN_PAGE,
+      transition: Transition.rightToLeft,
+      transitionDuration: Duration(milliseconds: 500),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
       page: () => const MainPageView(),
       binding: MainPageBinding(),
     ),
     GetPage(
       name: _Paths.SETTINGS_PAGE,
+<<<<<<< HEAD
       // transition: Transition.rightToLeft,
       // transitionDuration: Duration(milliseconds: 500),
+=======
+      transition: Transition.rightToLeft,
+      transitionDuration: Duration(milliseconds: 500),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
       page: () => const SettingsPageView(),
       binding: SettingsPageBinding(),
     ),
@@ -192,7 +212,15 @@ class AppPages {
       page: () => const EstimateFullSummaryPageView(),
       binding: EstimateFullSummaryPageBinding(),
     ),
+<<<<<<< HEAD
 
+=======
+    GetPage(
+      name: _Paths.PROFILE_MAIN_PAGE,
+      page: () => const ProfileMainPageView(),
+      binding: ProfileMainPageBinding(),
+    ),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
     GetPage(
       name: _Paths.PROFILE_EDIT_PAGE,
       page: () => const ProfileEditPageView(),

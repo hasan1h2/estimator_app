@@ -22,8 +22,12 @@ class CustomTeFromBo extends StatelessWidget {
     this.maxLines,
     this.validator,
     this.readOnly = false,
+<<<<<<< HEAD
     this.initialValue,
     this.onChanged, // Ensured it's passed as CrossAxisAlignment
+=======
+    this.initialValue, // Ensured it's passed as CrossAxisAlignment
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
   });
   final String hintText;
   final String lableText;
@@ -33,7 +37,10 @@ class CustomTeFromBo extends StatelessWidget {
   final int? maxLines;
   final int borderColor;
   final IconData? iconData;
+<<<<<<< HEAD
   final ValueChanged<dynamic>? onChanged;
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
   final bool prefixIcon;
   final bool isLableText;
   final bool readOnly;
@@ -61,7 +68,10 @@ class CustomTeFromBo extends StatelessWidget {
               ),
         isLableText ? SizedBox(height: 0) : SizedBox(height: 5),
         TextFormField(
+<<<<<<< HEAD
           onChanged: onChanged,
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           initialValue: initialValue,
           readOnly: readOnly,
           maxLines: maxLines ?? 1,

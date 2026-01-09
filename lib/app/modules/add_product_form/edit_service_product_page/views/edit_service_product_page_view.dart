@@ -7,7 +7,10 @@ import '../../../../data/utils/static_string/static_string.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
 import '../../../global_widget/custom_button/custom_button.dart';
 import '../../../global_widget/add_tow_btn_row/add_btn.dart';
+<<<<<<< HEAD
 import '../../../global_widget/show_dialog/show_dialog.dart';
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 import '../controllers/edit_service_product_page_controller.dart';
 import '../inner_widget/sub_delete_edit_fro.dart';
 class EditServiceProductPageView
@@ -68,6 +71,7 @@ class EditServiceProductPageView
                             width: 82.w,
                             borderRadius: 4,
                             onTap: () {
+<<<<<<< HEAD
                               ShowDialog.showCustomDialog(
                                 context,
                                 heading: 'Are your sure',
@@ -78,6 +82,9 @@ class EditServiceProductPageView
                                 isSuccess: true,
                                 lotiImg: StaticImg.deleteLoti,
                               );
+=======
+                              print(index);
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                             },
                             fSize: 10.sp,
                             bgColor: StaticColors.redColor,

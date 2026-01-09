@@ -15,13 +15,20 @@ class TermsServiceBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+<<<<<<< HEAD
       padding: EdgeInsets.only(bottom: 30.h, top: 10.h),
       margin: EdgeInsets.only(bottom: 50.h, top: 10.h),
+=======
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
       decoration: BoxDecoration(color: Color(StaticColors.whiteColor)),
       child: Column(
         children: [
           GestureDetector(
+<<<<<<< HEAD
             onTap: () => controller.toggleMoreTems(),
+=======
+            onTap: () => controller.toggleMore(),
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
               child: Obx(
@@ -44,7 +51,11 @@ class TermsServiceBox extends StatelessWidget {
                     ),
 
                     Icon(
+<<<<<<< HEAD
                       controller.showMoreTems.value
+=======
+                      controller.showMore.value
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                           ? Icons.keyboard_arrow_up
                           : Icons.keyboard_arrow_down,
                     ),
@@ -55,7 +66,11 @@ class TermsServiceBox extends StatelessWidget {
           ),
 
           Obx(
+<<<<<<< HEAD
             () => controller.showMoreTems.value
+=======
+            () => controller.showMore.value
+>>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                 ? Container(
                     padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                     margin: EdgeInsets.symmetric(horizontal: 20,),
