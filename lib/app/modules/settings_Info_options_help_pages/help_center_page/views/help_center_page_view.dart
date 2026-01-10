@@ -7,6 +7,7 @@ import '../../../../data/utils/static_colors/static_colors.dart';
 import '../../../../data/utils/static_img/static_img.dart';
 import '../../../../data/utils/static_string/static_string.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
+import '../../../global_widget/app_bar/app_bar.dart';
 import '../../../global_widget/custom_button/custom_button.dart';
 import '../../../global_widget/custom_text_from_with_border/custom_te_from_bo.dart';
 import '../../widget/estimate_top_bg_op.dart';
@@ -23,41 +24,47 @@ class HelpCenterPageView extends GetView<HelpCenterPageController> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              EstimateTopBgOp(title: StaticString.helpCenter),
-              HelpCenterFrom().paddingOnly(
-                bottom: 15,  // Adjusted padding value
-                top: 30,
-                right: 20,
-                left: 20,
-              ),
-              CustomButton(
+    return Scaffold(
+      appBar: CustomAppBar(
+        onTap: () {
+          Get.back();
+        },
+        title: '',
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            EstimateTopBgOp(title: StaticString.helpCenter),
+            HelpCenterFrom().paddingOnly(
+              bottom: 15,  // Adjusted padding value
+              top: 30,
+              right: 18,
+              left: 20,
+            ),
+            Center(
+              child: CustomButton(
                 bgColor: StaticColors.btnSixColor,
                 fColor: StaticColors.whiteColor,
                 onTap: () {},
                 title: StaticString.savCompInfo,
-                height: 52.h,
+                height: 62.h,
                 fWight: FontWeight.w400,
                 isLeftIcon: true,
                 borderRadius: 10,
-                fSize: 13.6,
+                fSize: 17.6,
                 leftIcon: StaticImg.save,
-                width: 335.w,
-              ).paddingSymmetric(horizontal: 20, vertical: 10), // Adjusted button layout
-              // =================How To Use Guide Box================
-              FittedBox(child: UseGuideMain()),
-              // =================QuestionsBoxMain Box================
-              QuestionsBoxMain(controller: controller),
-              // =================TermsServiceBox Box================
-              TermsServiceBox().paddingSymmetric(horizontal: 20),
-            ],
-          ).marginOnly(bottom: 40.w),
-        ),
+                width: MediaQuery.of(context).size.width,
+              ).paddingSymmetric(horizontal: 20, vertical: 10),
+            ), // Adjusted button layout
+            // =================How To Use Guide Box================
+            FittedBox(child: UseGuideMain()),
+            // =================QuestionsBoxMain Box================
+            QuestionsBoxMain(controller: controller),
+            // =================TermsServiceBox Box================
+            TermsServiceBox().paddingSymmetric(horizontal: 20),
+          ],
+        ).marginOnly(bottom: 40.w),
       ),
     );
   }

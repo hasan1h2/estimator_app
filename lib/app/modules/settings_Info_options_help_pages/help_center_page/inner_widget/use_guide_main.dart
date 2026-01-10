@@ -16,7 +16,7 @@ class UseGuideMain extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 2, vertical: 20),
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      height: 350.h, // Adjusted height for responsiveness
+      height: 400.h, // Adjusted height for responsiveness
       width: 392.w, // Adjusted width for responsiveness
       decoration: BoxDecoration(
         color: Color(StaticColors.whiteColor),
@@ -37,7 +37,7 @@ class UseGuideMain extends StatelessWidget {
                 child: Text(
                   StaticString.contCusService,
                   style: StaticStyle.style(
-                    13.3.sp,
+                    18.3.sp,
                     StaticColors.textPrColor,
                     FontWeight.w600,
                   ),
@@ -45,7 +45,7 @@ class UseGuideMain extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 10.h),
+          SizedBox(height: 15.h),
           Expanded(
             child: ListView.builder(
               physics: NeverScrollableScrollPhysics(), // Disables scrolling for the container

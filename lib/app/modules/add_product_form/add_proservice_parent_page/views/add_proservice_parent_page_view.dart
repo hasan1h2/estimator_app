@@ -5,6 +5,7 @@ import '../../../../data/utils/static_colors/static_colors.dart';
 import '../../../../data/utils/static_string/static_string.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
 import '../../../global_widget/add_tow_btn_row/add_btn.dart';
+import '../../../global_widget/app_bar/app_bar.dart';
 import '../../add_proservice_page/inner_widget/text_from.dart';
 import '../../add_proservice_page/inner_widget/upload_file_box.dart';
 import '../controllers/add_proservice_parent_page_controller.dart';
@@ -14,24 +15,36 @@ class AddProserviceParentPageView
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(onTap: () {Get.back();  },title: ''),
       body: SizedBox(
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: .start,
             children: [
               Text(
-                StaticString.parenServTitle,
+                StaticString.addSubTitle,
                 style: StaticStyle.style(
                   24.sp,
                   StaticColors.textPrColor,
                   FontWeight.w700,
                 ),
-              ).paddingSymmetric(vertical: 13),
-              TextFrom(isParent: true),
+              ).paddingSymmetric(vertical: 15),
+
+
+          Text(
+            StaticString.parentSer,
+            style: StaticStyle.style(
+              18.sp,
+              StaticColors.textPrColor,
+              FontWeight.w700,
+            ),),
+            SizedBox(height: 15.h,),
+
+            TextFrom(isParent: true),
               Text(
                 StaticString.servPho,
                 style: StaticStyle.style(
-                  14.sp,
+                  18.sp,
                   StaticColors.textPrColor,
                   FontWeight.w500,
                 ),
@@ -41,7 +54,7 @@ class AddProserviceParentPageView
               Text(
                 StaticString.phFormate,
                 style: StaticStyle.style(
-                  10.sp,
+                  14.sp,
                   StaticColors.grayColor1,
                   FontWeight.w400,
                 ),
@@ -50,11 +63,11 @@ class AddProserviceParentPageView
               AddBtn(
                 onTap1: () {Get.back();},
                 onTap2: () {Get.back();},
-                fastBtnTitle: StaticString.cancel,
-                secBtnTitle: StaticString.saveSer,
+                fastBtnTitle: StaticString.saveSer,
+                secBtnTitle: StaticString. cancel,
               ),
             ],
-          ).paddingOnly(top: 80, left: 20, right: 20, bottom: 30),
+          ).paddingOnly(top: 40, left: 20, right: 20, bottom: 30),
         ),
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 import '../../../../data/utils/static_colors/static_colors.dart';
 import '../../../../data/utils/static_img/static_img.dart';
@@ -26,41 +27,47 @@ class EstimateDowsecCard extends StatelessWidget {
         ),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(StaticImg.car1),
-          SizedBox(width: 10.w),
-          Column(
-            crossAxisAlignment: .start,
-            mainAxisAlignment: .spaceAround,
+          Row(
+            // mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
-                StaticString.newEst,
-                style: StaticStyle.style(
-                  18,
-                  StaticColors.textPrColor,
-                  FontWeight.w600,
-                ),
-              ),
-              Text(
-                StaticString.basXteWash,
-                style: StaticStyle.style(
-                  14,
-                  StaticColors.textPrColor,
-                  FontWeight.w500,
-                ),
-              ),
-              Text(
-                StaticString.quantity,
-                style: StaticStyle.style(
-                  13,
-                  StaticColors.textPrColor,
-                  FontWeight.w400,
-                ),
+              Image.asset(StaticImg.car1),
+              SizedBox(width: 10.w),
+              Column(
+                crossAxisAlignment: .start,
+                mainAxisAlignment: .spaceAround,
+                children: [
+                  Text(
+                    StaticString.newEst,
+                    style: StaticStyle.style(
+                      18,
+                      StaticColors.textPrColor,
+                      FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    StaticString.basXteWash,
+                    style: StaticStyle.style(
+                      14,
+                      StaticColors.textPrColor,
+                      FontWeight.w500,
+                    ),
+                  ),
+                  Text(
+                    StaticString.quantity,
+                    style: StaticStyle.style(
+                      13,
+                      StaticColors.textPrColor,
+                      FontWeight.w400,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
 
-          SizedBox(width: 45.w),
+
           Column(
             crossAxisAlignment: .end,
             mainAxisAlignment: .spaceAround,
@@ -75,7 +82,7 @@ class EstimateDowsecCard extends StatelessWidget {
                 ),
               ),
             ],
-          ),
+          ).paddingOnly(right: 10),
         ],
       ),
     );

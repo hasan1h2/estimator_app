@@ -47,7 +47,7 @@ class NavBarMain extends StatelessWidget {
               }
               if (index == 2) {
                 // Navigate to Profile page
-                Get.toNamed(Routes.PROFILE_FROM_PAGE);
+                Get.toNamed(Routes.PROFILE_MAIN_PAGE);
               }
             },
             child: Obx(() => Column(

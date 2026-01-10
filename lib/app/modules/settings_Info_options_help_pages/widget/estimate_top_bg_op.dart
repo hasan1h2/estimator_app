@@ -11,8 +11,8 @@ class EstimateTopBgOp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      padding: EdgeInsets.only(top: 50),
-      height: 186.h,
+      padding: EdgeInsets.only(top: 30),
+      height: 140.h,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Color(StaticColors.itemBgColor1),

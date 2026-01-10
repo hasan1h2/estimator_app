@@ -42,7 +42,7 @@ class QuestionsBox extends StatelessWidget {
                     Text(
                       questionsTitle,
                       style: StaticStyle.style(
-                        12,
+                        14,
                         StaticColors.textPrColor,
                         FontWeight.w500,
                       ),
@@ -63,11 +63,11 @@ class QuestionsBox extends StatelessWidget {
               return Text(
                 questionsDec,
                 style: StaticStyle.style(
-                  11.9,
-                  StaticColors.grayColor,
+                  13.9,
+                  StaticColors.textSeColor,
                   FontWeight.w400,
                 ),
-              );
+              ).paddingSymmetric(horizontal:25);
             } else {
               return const SizedBox();  // Return an empty box if not expanded
             }

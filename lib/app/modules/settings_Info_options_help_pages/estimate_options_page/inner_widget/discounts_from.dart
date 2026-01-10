@@ -26,7 +26,7 @@ class DiscountsFrom extends StatelessWidget {
           Container(
             padding:EdgeInsets.only(left: 10),
             width: 192.w,
-            height: 60.h,alignment: Alignment.centerLeft,
+            height: 70.h,alignment: Alignment.centerLeft,
             decoration: BoxDecoration(
               color: Color(StaticColors.whiteColor),
               borderRadius: BorderRadius.circular(6).w,
@@ -40,7 +40,7 @@ class DiscountsFrom extends StatelessWidget {
                 discountsTitle,
                 textAlign: TextAlign.start,
                 style: StaticStyle.style(
-                  14.sp,
+                  18.sp,
                   StaticColors.textPrColor,
                   FontWeight.w400,
                 ),
@@ -50,7 +50,7 @@ class DiscountsFrom extends StatelessWidget {
           SizedBox(width: 5.w),
              SizedBox(
               width: 70.w,
-              height: 56,
+              height: 70,
               child: CustomTeFromBo(
                 isLableText: true,
                 mainController: controller.dis,
@@ -61,11 +61,11 @@ class DiscountsFrom extends StatelessWidget {
                 borderRadius: 10.r,
                 crossAxi: CrossAxisAlignment.start,
               ),
-            ),
+            ).paddingOnly(top: 14),
           SizedBox(width: 5.w),
           Obx(
               () => CustomDropdownButton2(
-                buttonHeight: 60.h,
+                buttonHeight: 68.h,
                 hint: StaticString.emHint,
                 buttonWidth: 75.w,
                 icon: Icon(Icons.keyboard_arrow_down_outlined),
@@ -107,8 +107,8 @@ class DiscountsFrom extends StatelessWidget {
 
           SvgPicture.asset(
             StaticImg.delete,
-            width: 14.w,
-            height: 16.h,
+            width: 22.w,
+            height: 22.h,
           ),
         ],
       ),

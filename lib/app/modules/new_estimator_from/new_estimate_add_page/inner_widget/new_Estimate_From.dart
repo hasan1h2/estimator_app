@@ -202,7 +202,7 @@ class NewEstimateFrom extends GetView<NewEstimateAddPageController> {
               bgColor: StaticColors.whiteColor,
               fColor: StaticColors.textSeColor,
               onTap: () {
-                Get.toNamed(Routes.MAIN_PAGE);
+                Get.toNamed(Routes.ESTIMATE_ADD_ITEM1_PAGE);
               },
               title: StaticString.continueWithout,
               height: 48,

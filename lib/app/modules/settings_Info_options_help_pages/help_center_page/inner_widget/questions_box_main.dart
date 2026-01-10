@@ -1,7 +1,7 @@
 import 'package:estimatorapp/app/modules/settings_Info_options_help_pages/help_center_page/inner_widget/questions_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_utils/src/extensions/widget_extensions.dart';
 import '../../../../data/utils/static_colors/static_colors.dart';
 import '../../../../data/utils/static_img/static_img.dart';
@@ -34,7 +34,7 @@ class QuestionsBoxMain extends StatelessWidget {
                 Text(
                   StaticString.askedQuest,
                   style: StaticStyle.style(
-                    13.6.sp,
+                    18.6.sp,
                     StaticColors.textPrColor,
                     FontWeight.w600,
                   ),
@@ -42,9 +42,9 @@ class QuestionsBoxMain extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 10.h),
+          SizedBox(height: 15.h),
+          // Make ListView scrollable without fixed height and Expanded
           Expanded(
-            flex: 3,
             child: ListView.builder(
               itemCount: StaticString.questionsVal.length,
               itemBuilder: (context, index) => QuestionsBox(

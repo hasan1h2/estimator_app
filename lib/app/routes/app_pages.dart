@@ -61,7 +61,7 @@ class AppPages {
   AppPages._();
 
   // Define the initial route of the app
-  static final INITIAL = Routes.HELP_CENTER_PAGE;
+  static final INITIAL = Routes.SPLASH_PAGE;
 
   // Define the list of all routes in the app
   static final routes = [
@@ -226,7 +226,7 @@ class AppPages {
     // Profile edit page route
     GetPage(
       name: _Paths.PROFILE_EDIT_PAGE,
-      page: () => const ProfileEditPageView(),
+      page: () =>  ProfileEditPageView(),
       binding: ProfileEditPageBinding(),
     ),
   ];

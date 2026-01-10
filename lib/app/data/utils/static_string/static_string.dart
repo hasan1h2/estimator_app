@@ -57,7 +57,7 @@ class StaticString {
   static final String zCode = "Zip Code";
   static final String zCod = "44017";
   static final String comLogo = "Company Logo";
-  static final String upLogo = "Upload Logo";
+  static final String upLogo = "Upload";
   static final String phFormate = "PNG, JPG or GIF (max. 2MB)";
   static final String sComBtn = "Save Company info ";
   static final String saveC = "Save & Continue ";
@@ -100,6 +100,8 @@ class StaticString {
   static final String area = "Area 1";
   static final String addItem = "Add Item";
   static final String servicePro = "Service / Product";
+  static final String serviceTitle = "Service Title";
+  static final String subServTit = "Sub Service Title";
   static final String subServicePro = "Select Sub Service / Product";
   static final String selServPro = "Select Service / Product";
   static final String selServOp = "Select Sub Service Options";
@@ -180,7 +182,7 @@ class StaticString {
   // ===============================Parent service======================
   static final String parentSer = "Parent service";
   static final String parentSubSer = "Sub service Title";
-  static final String parenServTitle = "Add Sub services";
+  static final String addSubTitle = "Add Sub services";
   // =====================================Sub Service Options=======================
   static final String subServiceOp = "Sub Service Options";
   static final String addNewOp = "Add New Option";

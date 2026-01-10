@@ -12,47 +12,45 @@ class SettingsPageView extends GetView<SettingsPageController> {
   const SettingsPageView({super.key});
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        bottomNavigationBar: NavBarMain(index: 1,),
-        body: Column(
-          children: [
-            Center(
-              child: FittedBox(
-                child: Text(
-                  StaticString.settings,
-                  style: StaticStyle.style(
-                    24.sp,
-                    StaticColors.greyNormal,
-                    FontWeight.w700,
-                  ),
+    return Scaffold(
+      bottomNavigationBar: NavBarMain(index: 1,),
+      body: Column(
+        children: [
+          Center(
+            child: FittedBox(
+              child: Text(
+                StaticString.settings,
+                style: StaticStyle.style(
+                  24.sp,
+                  StaticColors.greyNormal,
+                  FontWeight.w700,
                 ),
               ),
             ),
-            SizedBox(height: 30.h),
-            ListView.builder(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: StaticString.settingsList.length,
-              itemBuilder: (context, index) => GestureDetector(
-                onTap: () {
-                  if(index==0){Get.toNamed(Routes.EDIT_COMPANY_INFO_PAGE);}
-                  if(index==1){Get.toNamed(Routes.ESTIMATE_OPTIONS_PAGE);}
-                  if(index==2){Get.toNamed(Routes.HELP_CENTER_PAGE);}
-                  if(index==3){Get.toNamed(Routes.INTEGRATIONS);}
-                  print(index);
+          ),
+          SizedBox(height: 30.h),
+          ListView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemCount: StaticString.settingsList.length,
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () {
+                if(index==0){Get.toNamed(Routes.EDIT_COMPANY_INFO_PAGE);}
+                if(index==1){Get.toNamed(Routes.ESTIMATE_OPTIONS_PAGE);}
+                if(index==2){Get.toNamed(Routes.HELP_CENTER_PAGE);}
+                if(index==3){Get.toNamed(Routes.INTEGRATIONS);}
+                print(index);
 
-                },
-                child: MyCard(
-                  rightTitle: StaticString.settingsList[index],
-                  leftTitle: Icons.arrow_forward_ios_rounded,
-                  onTap: () {},
-                ).paddingOnly(bottom: 13.w),
-              ),
+              },
+              child: MyCard(
+                rightTitle: StaticString.settingsList[index],
+                leftTitle: Icons.arrow_forward_ios_rounded,
+                onTap: () {},
+              ).paddingOnly(bottom: 13.w),
             ),
-          ],
-        ).marginOnly(right: 10.w,left: 10.w,top: 50.w,bottom: 20.w),
-      ),
+          ),
+        ],
+      ).marginOnly(right: 10.w,left: 10.w,top: 50.w,bottom: 20.w),
     );
   }
 }

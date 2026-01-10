@@ -8,7 +8,9 @@ import '../../../../data/utils/static_string/static_string.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
 
 class SubDeleteEditFro extends StatelessWidget {
-  const SubDeleteEditFro({super.key});
+  const SubDeleteEditFro({super.key, required this.onTapEdit, required this.onTapDelete});
+  final VoidCallback onTapEdit;
+  final VoidCallback onTapDelete;
 
   @override
   Widget build(BuildContext context) {
@@ -17,22 +19,26 @@ class SubDeleteEditFro extends StatelessWidget {
           title: Text(
             StaticString.carWash,
             style: StaticStyle.style(
-              10,
+              16.sp,
               StaticColors.textPrColor,
               FontWeight.w500,
             ),
           ),
           subtitle: Text("\$99.99",style: StaticStyle.style(
-            10,
+            14.sp,
             StaticColors.textSeColor,
             FontWeight.w500,
           ),),
           trailing: Row(
             mainAxisSize: .min,
             children: [
-              SvgPicture.asset(StaticImg.edit, width: 17),
+              GestureDetector(
+                onTap:onTapEdit ,
+                  child: SvgPicture.asset(StaticImg.edit, width: 24)),
               SizedBox(width: 20.w),
-              SvgPicture.asset(StaticImg.delete, width: 17),
+              GestureDetector(
+                onTap: onTapDelete,
+                  child: SvgPicture.asset(StaticImg.delete, width: 24)),
             ],
           ),
         ),);

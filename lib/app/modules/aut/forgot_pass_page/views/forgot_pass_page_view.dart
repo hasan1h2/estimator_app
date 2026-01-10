@@ -18,16 +18,18 @@ class ForgotPassPageView extends GetView<SinInPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      appBar: CustomAppBar(
+        onTap: () {
+          Get.toNamed(Routes.SIN_IN_PAGE);
+        },
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
           child: Form(
             key: controller.formKey,
             child: Column(
-
               children: [
-                CustomAppBar( onTap: () { Get.toNamed(Routes.SIN_IN_PAGE); },),
                 // ---------------------Forgot Password Text---------------
                 Padding(
                   padding: EdgeInsets.only(top: 100),
@@ -53,13 +55,10 @@ class ForgotPassPageView extends GetView<SinInPageController> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20.h,),
+                SizedBox(height: 20.h),
                 // -------------------------Form Section--------------
                 Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 50,
-                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 50),
                   child: CustomTextFrom(
                     validator: (value) => controller.validateEmail(value),
                     mainController: controller.email.value,

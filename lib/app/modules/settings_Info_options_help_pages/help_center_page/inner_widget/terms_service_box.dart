@@ -21,7 +21,7 @@ class TermsServiceBox extends GetView<HelpCenterPageController> {
       child: Column(
         children: [
           GestureDetector(
-            onTap: () => controller.toggleMore(0), // Now toggles using the index 0
+            onTap: () => controller.toggleMoreTems(), // Now toggles using the index 0
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25, ),
               child: Obx(
@@ -43,7 +43,7 @@ class TermsServiceBox extends GetView<HelpCenterPageController> {
                       ],
                     ),
                     Icon(
-                      controller.showMoreMap[0]?.value == true
+                      controller.showMoreTems.value
                           ? Icons.keyboard_arrow_up
                           : Icons.keyboard_arrow_down,
                     ),
@@ -53,7 +53,7 @@ class TermsServiceBox extends GetView<HelpCenterPageController> {
             ),
           ),
           Obx(
-                () => controller.showMoreMap[0]?.value == true
+                () => controller.showMoreTems.value
                 ? Container(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               margin: EdgeInsets.symmetric(horizontal: 20),

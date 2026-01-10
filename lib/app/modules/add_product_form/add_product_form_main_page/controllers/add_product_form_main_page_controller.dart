@@ -7,7 +7,7 @@ class AddProductFormMainPageController extends GetxController {
   }
   void routes() {
     if (routesSelext.value == "0") {
-      Get.toNamed(Routes.ADD_PROSERVICE_PAGE);
+      Get.toNamed(Routes.ADD_PROSERVICE_PAGE );
     } else if (routesSelext.value == "1") {
       Get.toNamed(Routes.ADD_PROSERVICE_PARENT_PAGE);
     } else if (routesSelext.value == "2") {

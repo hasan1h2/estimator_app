@@ -1,23 +1,11 @@
 import 'package:get/get.dart';
 
 class AddProserviceParentPageController extends GetxController {
-  //TODO: Implement AddProserviceParentPageController
+  // Observable for selected service product
+  var selectedServiceProduct = ''.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  // List of sub services that will populate the dropdown
+  List<String> subServiceProduct = ["Car Wash", "Plumbing", "Electrical"];
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+// Any other logic you need to manage the page
 }

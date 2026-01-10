@@ -19,14 +19,14 @@ class CustomarDetels extends StatelessWidget {
             ? SizedBox()
             : SvgPicture.asset(
                 controller.customerDet[index]["icon"],
-                width: 12.w,
-                height: 12.h,
+                width: 16.w,
+                height: 16.h,
               ),
         index == 0 ? SizedBox() : SizedBox(width: 5.w),
         Text(
           controller.customerDet[index]["title"],
           style: StaticStyle.style(
-            index == 0 ? 20.sp : 10.sp,
+            index == 0 ? 22.sp : 16.sp,
             index == 0 ? StaticColors.textPrColor : StaticColors.textSeColor,
             FontWeight.w500,
           ),

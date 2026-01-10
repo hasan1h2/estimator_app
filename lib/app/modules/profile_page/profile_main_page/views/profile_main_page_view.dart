@@ -11,41 +11,39 @@ class ProfileMainPageView extends GetView<ProfileMainPageController> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        bottomNavigationBar: NavBarMain(index: 2), // Fixed the bottom navigation bar
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              // Profile section with photo and edit button
-              PhotoAndEditbtnSec(),
+    return Scaffold(
+      bottomNavigationBar: NavBarMain(index: 2), // Fixed the bottom navigation bar
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            // Profile section with photo and edit button
+            PhotoAndEditbtnSec(),
 
-              // Profile details section
-              Column(
-                children: List.generate(controller.profileText.length, (index) {
-                  return ListTile(
-                    title: Text(
-                      controller.profileText[index]['title'],
-                      style: StaticStyle.style(
-                        14.sp,
-                        StaticColors.grayColor1,
-                        FontWeight.w500,
-                      ),
+            // Profile details section
+            Column(
+              children: List.generate(controller.profileText.length, (index) {
+                return ListTile(
+                  title: Text(
+                    controller.profileText[index]['title'],
+                    style: StaticStyle.style(
+                      18.sp,
+                      StaticColors.grayColor1,
+                      FontWeight.w500,
                     ),
-                    subtitle: Text(
-                      controller.profileText[index]['value'],
-                      style: StaticStyle.style(
-                        16.sp,
-                        StaticColors.textPrColor,
-                        FontWeight.w600,
-                      ),
+                  ),
+                  subtitle: Text(
+                    controller.profileText[index]['value'],
+                    style: StaticStyle.style(
+                      20.sp,
+                      StaticColors.textPrColor,
+                      FontWeight.w600,
                     ),
-                  );
-                }),
-              ),
-            ],
-          ).paddingSymmetric(vertical: 50, horizontal: 20),
-        ),
+                  ),
+                );
+              }),
+            ),
+          ],
+        ).paddingSymmetric(vertical: 50, horizontal: 20),
       ),
     );
   }

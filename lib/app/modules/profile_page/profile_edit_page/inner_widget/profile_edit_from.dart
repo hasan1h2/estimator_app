@@ -35,7 +35,6 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
     return Column(
       children: [
         CustomTeFromBo(
-          initialValue: comName,
           mainController: controller.comNameCtrl.value,
           hintText: StaticString.comHint,
           borderColor: StaticColors.grayColor,
@@ -47,7 +46,7 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
         ),
         SizedBox(height: 10),
         CustomTeFromBo(
-          initialValue: phoneNumber,
+
           mainController: controller.phoneNumCtrl.value,
           hintText: StaticString.phHint,
           borderColor: StaticColors.grayColor,
@@ -55,11 +54,11 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
           fillColor: StaticColors.whiteColor,
           borderRadius: 10,
           lableText: StaticString.phNumber,
-          crossAxi: CrossAxisAlignment.start,
+          crossAxi: CrossAxisAlignment.start,isImprotent: false,
         ),
         SizedBox(height: 10),
         CustomTeFromBo(
-          initialValue: emailAdd,
+
           mainController: controller.emailCtrl.value,
           readOnly: true, // Email field is read-only
           hintText: StaticString.emHint,
@@ -72,7 +71,7 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
         ),
         SizedBox(height: 10),
         CustomTeFromBo(
-          initialValue: webSite,
+
           mainController: controller.webSiteCtrl.value,
           hintText: StaticString.webHint,
           borderColor: StaticColors.grayColor,
@@ -84,7 +83,6 @@ class ProfileEditFrom extends GetView<ProfileMainPageController> {
         ),
         SizedBox(height: 10),
         CustomTeFromBo(
-          initialValue: comAdd,
           mainController: controller.addressCtrl.value,
           hintText: StaticString.comAddHint,
           borderColor: StaticColors.grayColor,

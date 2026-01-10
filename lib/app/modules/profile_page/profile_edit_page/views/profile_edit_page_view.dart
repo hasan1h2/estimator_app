@@ -7,6 +7,7 @@ import '../../../../data/utils/static_colors/static_colors.dart';
 import '../../../../data/utils/static_img/static_img.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
 import '../../../../routes/app_pages.dart';
+import '../../../global_widget/app_bar/app_bar.dart';
 import '../../../global_widget/custom_button/custom_button.dart';
 import '../../../global_widget/show_dialog/show_dialog.dart';
 import '../../profile_main_page/controllers/profile_main_page_controller.dart';
@@ -28,101 +29,100 @@ class ProfileEditPageView extends GetView<ProfileMainPageController> {
     String address = arguments['address'];
     String webSite = arguments['webSite'];
 
-    return SafeArea(
-      child: Scaffold(
-        // appBar: CustomAppBar(title: 'Edit your profile'),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(
-                child: Text(
-                  "Edit your profile",
-                  style: StaticStyle.style(
-                    24.sp,  // Using ScreenUtil for text scaling
-                    StaticColors.textPrColor,
-                    FontWeight.w700,
-                  ),
+    return Scaffold(
+      appBar: CustomAppBar(onTap: () {Get.back();  },title: '',),
+      // appBar: CustomAppBar(title: 'Edit your profile'),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: Text(
+                "Edit your profile",
+                style: StaticStyle.style(
+                  24.sp,  // Using ScreenUtil for text scaling
+                  StaticColors.textPrColor,
+                  FontWeight.w700,
                 ),
               ),
-              SizedBox(height: 40.h),
-              // Using ScreenUtil for responsive sizing
-              Center(
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    CircleAvatar(
-                      radius: 40,  // Adjust size as needed
-                      backgroundImage: AssetImage(StaticImg.ellipse), // Use your image
-                    ),
-                    Positioned(
-                      bottom: 0,
-                      right: 0,
-                      child: Container(
-                        padding: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all(color: Colors.blue, width: 2),
-                        ),
-                        child: SvgPicture.asset(StaticImg.camera, width: 15, height: 15), // Camera icon
+            ),
+            SizedBox(height: 40.h),
+            // Using ScreenUtil for responsive sizing
+            Center(
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  CircleAvatar(
+                    radius: 40,  // Adjust size as needed
+                    backgroundImage: AssetImage(StaticImg.ellipse), // Use your image
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: Container(
+                      padding: EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(50),
+                        border: Border.all(color: Colors.blue, width: 2),
                       ),
+                      child: SvgPicture.asset(StaticImg.camera, width: 15, height: 15), // Camera icon
                     ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 14.h),
-              // Centered Text (Name)
-              Center(
-                child: Text(
-                  controller.comNameVal.value,
-                  style: StaticStyle.style(
-                    20.sp,  // Using ScreenUtil for text scaling
-                    StaticColors.textPrColor,
-                    FontWeight.w600,
                   ),
+                ],
+              ),
+            ),
+            SizedBox(height: 14.h),
+            // Centered Text (Name)
+            Center(
+              child: Text(
+                controller.comNameVal.value,
+                style: StaticStyle.style(
+                  20.sp,  // Using ScreenUtil for text scaling
+                  StaticColors.textPrColor,
+                  FontWeight.w600,
                 ),
               ),
+            ),
 
-              SizedBox(height: 50.h),
+            SizedBox(height: 50.h),
 
-              // ProfileEditForm (Custom Widget)
-              ProfileEditFrom(
-                comName: comName,
-                phoneNumber: phoneNum,
-                emailAdd: email,
-                webSite: webSite,
-                comAdd: address,
-              ),
+            // ProfileEditForm (Custom Widget)
+            ProfileEditFrom(
+              comName: comName,
+              phoneNumber: phoneNum,
+              emailAdd: email,
+              webSite: webSite,
+              comAdd: address,
+            ),
 
-              SizedBox(height: 50.h),
+            SizedBox(height: 50.h),
 
-              // Save Changes Button with Responsive Height
-              CustomButton(
-                leftIcon: StaticImg.plus,
-                iconColors: Colors.grey,
-                borderColor: StaticColors.grayColor,
-                borderRadius: 10.r,  // Responsive border radius
-                width: screenWidth,  // Full width
-                bgColor: StaticColors.itemBgColor1,
-                fColor: StaticColors.whiteColor,
-                onTap: () {
-                  // Save Profile Changes and Show Confirmation Dialog
-                  ShowDialog.showCustomDialog(
-                    context,
-                    heading: 'Successfully Update Profile',
-                    seBtnTitle: 'Ok',
-                    onTap2: () => Get.toNamed(Routes.MAIN_PAGE),  // Navigate to MAIN_PAGE
-                    onlySuccesMsg: true,
-                    isSuccess: true,
-                  );
-                },
-                title: StaticString.saveChanBtn,
-                height: 56.h, // Responsive height
-              ).marginOnly(top: 20.h, bottom: 10.h),  // Responsive margins
-            ],
-          ).paddingSymmetric(vertical: 30.h, horizontal: 20.w), // Responsive padding
-        ),
+            // Save Changes Button with Responsive Height
+            CustomButton(
+              leftIcon: StaticImg.plus,
+              iconColors: Colors.grey,
+              borderColor: StaticColors.grayColor,
+              borderRadius: 10.r,  // Responsive border radius
+              width: screenWidth,  // Full width
+              bgColor: StaticColors.itemBgColor1,
+              fColor: StaticColors.whiteColor,
+              onTap: () {
+                // Save Profile Changes and Show Confirmation Dialog
+                ShowDialog.showCustomDialog(
+                  context,
+                  heading: 'Successfully Update Profile',
+                  seBtnTitle: 'Ok',
+                  onTap2: () => Get.toNamed(Routes.MAIN_PAGE),  // Navigate to MAIN_PAGE
+                  onlySuccesMsg: true,
+                  isSuccess: true,
+                );
+              },
+              title: StaticString.saveChanBtn,
+              height: 56.h, // Responsive height
+            ).marginOnly(top: 20.h, bottom: 10.h),  // Responsive margins
+          ],
+        ).paddingSymmetric(vertical: 30.h, horizontal: 20.w), // Responsive padding
       ),
     );
   }

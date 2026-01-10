@@ -62,23 +62,20 @@ class _VerifiPageViewState extends State<VerifiPageView> {
       ),
     );
 
-    return SafeArea(
-      child: Scaffold(
-        body: PageView.builder(
-
-          controller: pageController,
-          physics: NeverScrollableScrollPhysics(),
-          itemCount: 2,
-          itemBuilder: (context, index) => Form(
-            key: formKey,
+    return Scaffold(
+      appBar: AppBar(),
+      body: PageView.builder(
+        controller: pageController,
+        physics: NeverScrollableScrollPhysics(),
+        itemCount: 2,
+        itemBuilder: (context, index) => Form(
+          key: formKey,
+          child: SingleChildScrollView(  // Wrap the Column in a SingleChildScrollView
             child: Padding(
               padding: const EdgeInsets.all(40.0),
               child: Column(
-
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CustomAppBar( onTap: () { Get.toNamed(Routes.SIN_IN_PAGE); },).marginOnly(bottom: 50),
-
                   Center(
                     child: Padding(
                       padding: EdgeInsets.only(top: 26),
@@ -104,7 +101,6 @@ class _VerifiPageViewState extends State<VerifiPageView> {
                       ),
                     ),
                   ),
-
                   SizedBox(height: 29),
                   Pinput(
                     length: 6,
@@ -139,7 +135,6 @@ class _VerifiPageViewState extends State<VerifiPageView> {
                     onCompleted: (pin) => debugPrint("Completed: $pin"),
                     errorText: otpError,
                   ),
-
                   const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -177,7 +172,6 @@ class _VerifiPageViewState extends State<VerifiPageView> {
                     title: StaticString.verify,
                     height: 48,
                   ),
-
                 ],
               ),
             ),
@@ -185,6 +179,7 @@ class _VerifiPageViewState extends State<VerifiPageView> {
         ),
       ),
     );
+
   }
 }
 

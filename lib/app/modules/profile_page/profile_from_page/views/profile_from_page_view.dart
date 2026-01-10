@@ -24,6 +24,7 @@ class ProfileFromPageView extends GetView<ProfileMainPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar( onTap: () { Get.toNamed(Routes.MAIN_PAGE); },),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
@@ -31,7 +32,7 @@ class ProfileFromPageView extends GetView<ProfileMainPageController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              CustomAppBar( onTap: () { Get.toNamed(Routes.MAIN_PAGE); },),
+
               Padding(
                 padding: EdgeInsets.only(top: 40, bottom: 5),
                 child: Text(

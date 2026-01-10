@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../../../data/utils/static_colors/static_colors.dart';
 import '../../../../data/utils/static_string/static_string.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
+import '../../../global_widget/app_bar/app_bar.dart';
 import '../controllers/add_proservice_page_controller.dart';
 import '../../../global_widget/add_tow_btn_row/add_btn.dart';
 import '../inner_widget/text_from.dart';
@@ -14,6 +15,7 @@ class AddProservicePageView extends GetView<AddProservicePageController> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width.w;
     return Scaffold(
+      appBar: CustomAppBar(onTap: () {Get.back();  },title: '',),
       body:  SingleChildScrollView(
         child: Column(
           crossAxisAlignment: .start,
@@ -51,11 +53,11 @@ class AddProservicePageView extends GetView<AddProservicePageController> {
             AddBtn(
               onTap1: () => Get.back(),
               onTap2: () => Get.back(),
-              fastBtnTitle: StaticString.cancel,
-              secBtnTitle: StaticString.saveSer,
+              fastBtnTitle: StaticString.saveSer,
+              secBtnTitle: StaticString.cancel,
             ),
           ],
-        ).paddingOnly(top: 80, left: 20, right: 20, bottom: 20),
+        ).paddingOnly(top: 40, left: 20, right: 20, bottom: 20),
       ),
     );
   }

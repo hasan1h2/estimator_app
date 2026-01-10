@@ -18,17 +18,17 @@ class DiscountsText extends StatelessWidget {
         Text(
           StaticString.presetDisco,
           style: StaticStyle.style(
-            12.sp,
+            18.sp,
             StaticColors.textPrColor,
             FontWeight.w500,
           ),
         ), Row(
           children: [
-            SvgPicture.asset(StaticImg.add),
+            SvgPicture.asset(StaticImg.add,width: 22.w,),SizedBox(width: 10.w,),
             Text(
               StaticString.add,
               style: StaticStyle.style(
-                11.sp,
+                18.sp,
                 StaticColors.newPrColor,
                 FontWeight.w500,
               ),

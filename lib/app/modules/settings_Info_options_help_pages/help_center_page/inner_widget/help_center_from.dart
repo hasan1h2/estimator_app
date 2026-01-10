@@ -20,7 +20,7 @@ class HelpCenterFrom extends StatelessWidget {
             Text(
               StaticString.contCusService,
               style: StaticStyle.style(
-                13.3.sp,
+                17.3.sp,
                 StaticColors.textPrColor,
                 FontWeight.w600,
               ),

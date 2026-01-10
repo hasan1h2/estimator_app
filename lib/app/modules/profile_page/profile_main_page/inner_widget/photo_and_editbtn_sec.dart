@@ -68,7 +68,7 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
           ),
           SizedBox(height: 10.h),
           SizedBox(
-            width: 160.w,
+            width: 190.w,
             child: ElevatedButton(
               onPressed: () {
                 // Navigate to edit profile page with the current data
@@ -89,12 +89,12 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
                   Text(
                     'Edit Profile',
                     style: StaticStyle.style(
-                      14.sp,
+                      16.sp,
                       StaticColors.whiteColor,
                       FontWeight.w600,
                     ),
                   ),
-                  SizedBox(width: 10.w),
+                  SizedBox(width: 15.w),
                   SvgPicture.asset(
                     StaticImg.edit,
                     width: 10,

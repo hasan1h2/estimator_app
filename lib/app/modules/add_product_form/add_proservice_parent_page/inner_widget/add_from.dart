@@ -37,7 +37,7 @@ class AddFrom extends StatelessWidget {
             title: StaticString.add,
             fSize: 16.sp,
             fWight: FontWeight.w500,
-            height: 46.h, // Responsive height
+            height: 67.h, // Responsive height
           ).paddingAll(10),
         ),
       ],

@@ -5,6 +5,7 @@ import '../../../../data/utils/static_colors/static_colors.dart';
 import '../../../../data/utils/static_string/static_string.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
 import '../../../../routes/app_pages.dart';
+import '../../../global_widget/app_bar/app_bar.dart';
 import '../../../global_widget/custom_button/custom_button.dart';
 import '../controllers/estimate_down_payment_page_controller.dart';
 import '../inner_widget/discount_sec.dart';
@@ -17,6 +18,12 @@ class EstimateDownPaymentPageView extends GetView<EstimateDownPaymentPageControl
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      appBar: CustomAppBar(
+        onTap: () {
+          Get.back();
+        },
+        title: '',
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -54,7 +61,7 @@ class EstimateDownPaymentPageView extends GetView<EstimateDownPaymentPageControl
                     margin: EdgeInsets.all(0),
                     child: Padding(
                       padding: EdgeInsets.symmetric(
-                        horizontal: 24,
+                        horizontal: 20,
                         vertical: 33,
                       ),
                       child: Column(

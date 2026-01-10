@@ -28,7 +28,7 @@ class UseGuideOp extends StatelessWidget {
             Text(
               opTitle,
               style: StaticStyle.style(
-                14.sp,
+                18.sp,
                 StaticColors.textPrColor,
                 FontWeight.w600,
               ),
@@ -36,7 +36,7 @@ class UseGuideOp extends StatelessWidget {
             Text(
               opSubTitle,
               style: StaticStyle.style(
-                12.sp,
+                14.sp,
                 StaticColors.textPrColor,
                 FontWeight.w400,
               ),
