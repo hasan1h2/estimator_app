@@ -15,7 +15,7 @@ class EstimateDowsecCard extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width.w;
     return Container(
       width: screenWidth,
-      height: 105.h,
+      height: 120.h,
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Color(StaticColors.whiteColor),
@@ -44,7 +44,7 @@ class EstimateDowsecCard extends StatelessWidget {
               Text(
                 StaticString.basXteWash,
                 style: StaticStyle.style(
-                  13,
+                  14,
                   StaticColors.textPrColor,
                   FontWeight.w500,
                 ),
@@ -52,7 +52,7 @@ class EstimateDowsecCard extends StatelessWidget {
               Text(
                 StaticString.quantity,
                 style: StaticStyle.style(
-                  12,
+                  13,
                   StaticColors.textPrColor,
                   FontWeight.w400,
                 ),

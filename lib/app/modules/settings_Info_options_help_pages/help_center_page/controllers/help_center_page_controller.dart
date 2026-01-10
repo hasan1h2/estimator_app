@@ -1,8 +1,7 @@
 import 'package:get/get.dart';
 
 class HelpCenterPageController extends GetxController {
-<<<<<<< HEAD
-  // Use a map to manage the showMore states dynamically
+  // Maintain the visibility state of each section by its index
   RxMap<int, RxBool> showMoreMap = <int, RxBool>{}.obs;
 
   // Toggle the state for a specific section based on the index
@@ -14,14 +13,8 @@ class HelpCenterPageController extends GetxController {
   }
 
   RxBool showMoreTems = false.obs;
+
   void toggleMoreTems() {
     showMoreTems.value = !showMoreTems.value;
   }
-=======
-  //TODO: Implement HelpCenterPageController
-
-  void toggleMore() {
-    showMore.value = !showMore.value;
-  } RxBool showMore = false.obs;
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 }

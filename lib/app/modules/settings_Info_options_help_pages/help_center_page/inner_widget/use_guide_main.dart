@@ -7,21 +7,17 @@ import '../../../../data/utils/static_img/static_img.dart';
 import '../../../../data/utils/static_string/static_string.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
 import 'use_guide_op.dart';
+
 class UseGuideMain extends StatelessWidget {
   const UseGuideMain({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       padding: EdgeInsets.symmetric(horizontal: 2, vertical: 20),
-<<<<<<< HEAD
-      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-      height: 500.h,
-=======
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      height: 350.h,
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
-      width: 392.w,
+      height: 350.h, // Adjusted height for responsiveness
+      width: 392.w, // Adjusted width for responsiveness
       decoration: BoxDecoration(
         color: Color(StaticColors.whiteColor),
         borderRadius: BorderRadius.circular(12),
@@ -52,16 +48,12 @@ class UseGuideMain extends StatelessWidget {
           SizedBox(height: 10.h),
           Expanded(
             child: ListView.builder(
-<<<<<<< HEAD
-              physics: NeverScrollableScrollPhysics(),
-=======
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
+              physics: NeverScrollableScrollPhysics(), // Disables scrolling for the container
               itemCount: StaticString.UseGuideval.length,
               itemBuilder: (context, index) => UseGuideOp(
                 opNumber: index + 1,
                 opTitle: StaticString.UseGuideval[index]["title"],
-                opSubTitle:
-                StaticString.UseGuideval[index]["subtitle"],
+                opSubTitle: StaticString.UseGuideval[index]["subtitle"],
               ).marginOnly(bottom: 20),
             ),
           ),

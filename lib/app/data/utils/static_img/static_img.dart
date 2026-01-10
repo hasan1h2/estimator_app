@@ -31,15 +31,17 @@ class StaticImg {
   static final String map='$imgbasepathsvg/map.svg';
   static final String estimate='$imgbasepathsvg/estimate.svg';
   static final String camera='$imgbasepathsvg/camera.svg';
+  static final String customer='$imgbasepathsvg/customer.svg';
+  static final String settings='$imgbasepathsvg/settings.svg';
 
 
   // --------------------------lottie_img---------------------------
   static final String success='$imgbasepathlottie/success.json';
-<<<<<<< HEAD
+
   static final String deleteLoti='$imgbasepathlottie/delete.json';
   static final String editLoti='$imgbasepathlottie/edit.json';
-=======
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
+
+
 
 
 // --------------------------Png---------------------------

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../../../data/utils/static_colors/static_colors.dart';
@@ -26,6 +27,7 @@ class ServiceProductPhotoAdd extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(height: 15.h),
         GestureDetector(
           onTap: () {
             Dilock.showCustomDialog(context, mainController);
@@ -34,6 +36,9 @@ class ServiceProductPhotoAdd extends StatelessWidget {
             bgColor: StaticColors.photoColor,
             icon: StaticImg.photos,
             borderColor: StaticColors.grayColor,
+            width: 100.w,
+            height: 100.h,
+            pd: 8,
           ),
         ),
       ],

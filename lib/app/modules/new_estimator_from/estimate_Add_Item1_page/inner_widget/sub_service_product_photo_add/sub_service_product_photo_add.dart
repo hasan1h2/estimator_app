@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../../../data/utils/static_colors/static_colors.dart';
@@ -28,9 +29,13 @@ class SubServiceProductPhotoAdd extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(height: 15.h),
         GestureDetector(
           onTap: () => Dilock.showCustomDialog(context, mainController),
           child: CustomUploadFileBox(
+            width: 100.w,
+            height: 100.h,
+            pd: 8,
             bgColor: StaticColors.photoColor,
             icon: StaticImg.photos,
             borderColor: StaticColors.grayColor,

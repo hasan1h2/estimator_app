@@ -19,7 +19,7 @@ class DownPaymentSec extends StatelessWidget {
     return  Container(
       margin: REdgeInsets.symmetric(vertical: 25),
       padding: EdgeInsets.all(20),
-      height: 500.h,
+      height: 600.h,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Color(StaticColors.whiteColor),
@@ -39,7 +39,7 @@ class DownPaymentSec extends StatelessWidget {
               Text(
                 StaticString.downPay,
                 style: StaticStyle.style(
-                  15,
+                  18,
                   StaticColors.textSeColor,
                   FontWeight.w700,
                 ),
@@ -59,6 +59,7 @@ class DownPaymentSec extends StatelessWidget {
                   borderRadius: 10,
                   lableText: StaticString.require,
                   crossAxi: CrossAxisAlignment.start,
+
                 ),
               ),
               SizedBox(width: 10.w),
@@ -98,20 +99,21 @@ class DownPaymentSec extends StatelessWidget {
                     Text(
                       StaticString.payMethod,
                       style: StaticStyle.style(
-                        14,
+                        17,
                         StaticColors.textSeColor,
                         FontWeight.w500,
                       ),
                     ),
-                    SizedBox(height: 5.h),
+                    SizedBox(height: 12.h),
                     DropdownBtnDiscount(
                       controller: controller,
-                    ),
+                    ).marginOnly(top: 10),
                   ],
                 ),
               ),
             ],
           ).marginSymmetric(vertical: 10),
+          SizedBox(height: 15.h),
           Divider(
             height: 2.h,
             endIndent: 5,
@@ -119,14 +121,14 @@ class DownPaymentSec extends StatelessWidget {
             indent: 5,
             thickness: 2,
           ),
-
+          SizedBox(height: 15.h),
           Row(
             mainAxisAlignment: .spaceBetween,
             children: [
               Text(
                 StaticString.remainingBal,
                 style: StaticStyle.style(
-                  13.6.sp,
+                  17.6.sp,
                   StaticColors.textSeColor,
                   FontWeight.w500,
                 ),
@@ -134,7 +136,7 @@ class DownPaymentSec extends StatelessWidget {
               Text(
                 "\$800.00",
                 style: StaticStyle.style(
-                  20.sp,
+                  22.sp,
                   StaticColors.downPayTextC,
                   FontWeight.w700,
                 ),
@@ -144,13 +146,14 @@ class DownPaymentSec extends StatelessWidget {
             vertical: 10,
             horizontal: 5,
           ),
+          SizedBox(height: 15.h),
           CustomButton(
             leftIcon: StaticImg.chack,
             isLeftIcon: true,
             iconColors: Colors.grey,
             borderColor: StaticColors.grayColor,
             borderRadius: 10,
-            fSize: 13.6,
+            fSize: 18.6,
             fWight: FontWeight.w600,
             width: screenWidth,
             bgColor: StaticColors.whiteLight,
@@ -162,7 +165,7 @@ class DownPaymentSec extends StatelessWidget {
               controller.onSubmit(); // Call the submit method from controller
             },
             title: StaticString.processPay,
-            height: 44.h, // Responsive height
+            height: 60.h, // Responsive height
           ).paddingSymmetric(vertical: 16),
         ],
       ),

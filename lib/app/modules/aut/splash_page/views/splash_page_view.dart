@@ -11,99 +11,71 @@ import '../controllers/splash_page_controller.dart';
 
 class SplashPageView extends GetView<SplashPageController> {
   const SplashPageView({super.key});
+
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
-=======
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: SingleChildScrollView(
-            physics: NeverScrollableScrollPhysics(),
-            child: Column(
-              children: [
-                // ---------------------img------------
-                Padding(
-                  padding: EdgeInsetsGeometry.only(
-                    left: 51,
-                    right: 50,
-                    top: 170,
-                    bottom: 50,
-                  ),
-                  child: Image.asset(StaticImg.sploginba),
-                ),
-<<<<<<< HEAD
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // ---------------------Splash Image-------------
+              Image.asset(StaticImg.sploginba),
+              SizedBox(height: 60.h),
+              // -------------------Sign Up Button--------
+              CustomButton(
+                bgColor: StaticColors.btnColor,
+                fColor: StaticColors.whiteColor,
+                onTap: () =>
+                    Get.toNamed(Routes.SIN_UP_PAGE), // Navigate to SignUp page
+                title: StaticString.signUp, // Button title
+              ),
 
-=======
-            
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
-                // -------------------CustomButton--------SinUp------------
-                CustomButton(
-                  bgColor: StaticColors.btnColor,
-                  fColor: StaticColors.whiteColor,
-                  onTap: () => Get.toNamed(Routes.SIN_UP_PAGE),
-                  title: StaticString.signUp,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Text(
-                    StaticString.or,
-                    style: StaticStyle.style(
-                      16,
-                      StaticColors.grayColor,
-                      FontWeight.w400,
-                    ),
+              // -------------------Text 'OR'--------------
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Text(
+                  StaticString.or, // Text to separate buttons
+                  style: StaticStyle.style(
+                    16.sp, // Font size scaling
+                    StaticColors.grayColor, // Text color
+                    FontWeight.w400, // Font weight
                   ),
                 ),
-                // -------------------CustomButton--Google------------------
-                CustomButton(
-                  bgColor: StaticColors.whiteColor,
-                  fColor: StaticColors.textSeColor,
-                  onTap: () {},
-                  title: StaticString.gAccount,
-                  height: 42,
-                  fWight: FontWeight.w400,
-                  isLeftIcon: true,
-                  borderRadius: 12,
-                  leftIcon: StaticImg.google,
-                isIconColor: true,
-                ),
-                SizedBox(height: 17),
-<<<<<<< HEAD
+              ),
 
-                // -------------------CustomButton--Apple------------------
+              // -------------------Google Sign In Button--------
+              CustomButton(
+                bgColor: StaticColors.whiteColor,
+                fColor: StaticColors.textSeColor,
+                onTap: () {}, // Implement Google sign-in functionality
+                title: StaticString.gAccount, // Button title
+                height: 42,
+                fWight: FontWeight.w400,
+                isLeftIcon: true, // Icon on the left side
+                borderRadius: 12,
+                leftIcon: StaticImg.google, // Google icon
+                isIconColor: true, // Icon color set to true
+              ),
 
+              SizedBox(height: 17),
 
-=======
-            
-                // -------------------CustomButton--Apple------------------
-            
-            
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
-                CustomButton(
-                  bgColor: StaticColors.whiteColor,
-                  fColor: StaticColors.textSeColor,
-                  onTap: () {},
-                  title: StaticString.apAccount,
-                  height: 42,
-                  fWight: FontWeight.w400,
-                  isLeftIcon: true,
-                  borderRadius: 12,
-                  leftIcon: StaticImg.apple,
-                  isIconColor: true,
-                ).marginOnly(bottom: 30.w),
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
-              ],
-            ),
+              // -------------------Apple Sign In Button--------
+              CustomButton(
+                bgColor: StaticColors.whiteColor,
+                fColor: StaticColors.textSeColor,
+                onTap: () {}, // Implement Apple sign-in functionality
+                title: StaticString.apAccount, // Button title
+                height: 42,
+                fWight: FontWeight.w400,
+                isLeftIcon: true, // Icon on the left side
+                borderRadius: 12,
+                leftIcon: StaticImg.apple, // Apple icon
+                isIconColor: true, // Icon color set to true
+              ).marginOnly(bottom: 30.w), // Add margin at the bottom
+            ],
           ),
         ),
       ),

@@ -16,67 +16,65 @@ class MainPageView extends GetView<MainPageController> {
   const MainPageView({super.key});
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        bottomNavigationBar: NavBarMain(index: 0),
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 50),
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsetsGeometry.only(
-                  left: 51,
-                  right: 50,
-                  top: 12,
-                  bottom: 70,
-                ),
-                child: Image.asset(StaticImg.sploginba),
+    return Scaffold(
+      bottomNavigationBar: NavBarMain(index: 0),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 50),
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsetsGeometry.only(
+                left: 51,
+                right: 50,
+                top: 30,
+                bottom: 30,
               ),
-              Expanded(
-                child: ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: StaticString.newEstVal.length,
-                  itemBuilder: (context, index) => Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10),
-                    child: CustomButton(
-                      bgColor: StaticColors.newPrColor,
-                      fColor: StaticColors.whiteColor,
-                      onTap: () {
-                        if (index == 0) {
-                          Get.toNamed(Routes.NEW_ESTIMATE_ADD_PAGE);
-                        }
-                        if (index == 1) {
-                          Get.toNamed(Routes.ADD_PRODUCT_FORM_MAIN_PAGE);
-                        }
-                        if (index == 2) {
-                          ShowDialog.showCustomDialog(
-                            context,
-                            heading:'Customer Management',
-                            fBtnTitle: 'Add Customer',
-                            seBtnTitle: 'Find Customer',
+              child: Image.asset(StaticImg.sploginba),
+            ),
+            Expanded(
+              child: ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: StaticString.newEstVal.length,
+                itemBuilder: (context, index) => Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  child: CustomButton(
+                    bgColor: StaticColors.newPrColor,
+                    fColor: StaticColors.whiteColor,fSize: 18,
+                    onTap: () {
+                      if (index == 0) {
+                        Get.toNamed(Routes.NEW_ESTIMATE_ADD_PAGE);
+                      }
+                      if (index == 1) {
+                        Get.toNamed(Routes.ADD_PRODUCT_FORM_MAIN_PAGE);
+                      }
+                      if (index == 2) {
+                        ShowDialog.showCustomDialog(
+                          context,
+                          heading:'Customer Management',
+                          fBtnTitle: 'Add Customer',
+                          seBtnTitle: 'Find Customer',
 
-                           onTap1:  () => Get.toNamed(Routes.CUSTOMER_MAN_FROM_PAGE),
-                           onTap2: () => Get.toNamed(Routes.FIND_CUSTOMERM_PAGE),
-                          );
-                        }
-                        if (index == 3) {
-                          Get.toNamed(Routes.SETTINGS_PAGE);
-                        }
-                      },
-                      title: StaticString.newEstVal[index]["title"],
-                      height: 61.h,
-                      fWight: FontWeight.w400,
-                      isLeftIcon: true,
-                      borderRadius: 10,
-                      leftIcon: StaticImg.plus,
-                      width: 335.w,
-                    ),
+                         onTap1:  () => Get.toNamed(Routes.CUSTOMER_MAN_FROM_PAGE),
+                         onTap2: () => Get.toNamed(Routes.FIND_CUSTOMERM_PAGE),
+                        );
+                      }
+                      if (index == 3) {
+                        Get.toNamed(Routes.SETTINGS_PAGE);
+                      }
+                    },
+                    title: StaticString.newEstVal[index]["title"],
+                    height: 61.h,
+                    fWight: FontWeight.w400,
+                    isLeftIcon: true,
+                    borderRadius: 10,
+                    leftIcon: StaticString.newEstVal[index]["icon"],
+                    width: 335.w,
                   ),
                 ),
               ),
-              SizedBox(height: 24),
-            ],
-          ),
+            ),
+            SizedBox(height: 24),
+          ],
         ),
       ),
     );

@@ -17,10 +17,9 @@ class ShowDialog {
         bool onlySuccesMsg = false,
          VoidCallback? onTap1,// onTap2 is nullable (optional)
         required VoidCallback onTap2,
-<<<<<<< HEAD
+
         String ?lotiImg,
-=======
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
+
       }) async {
     showDialog(
       context: context,
@@ -44,11 +43,7 @@ class ShowDialog {
               // Conditional rendering for success message
               if (isSuccess) ...[
                 Lottie.asset(
-<<<<<<< HEAD
                  lotiImg ?? StaticImg.success,
-=======
-                  StaticImg.success,
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                   width: 120,
                   height: 100,
                   fit: BoxFit.fill,

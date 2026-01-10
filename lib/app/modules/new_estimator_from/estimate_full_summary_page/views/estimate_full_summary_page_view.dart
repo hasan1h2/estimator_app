@@ -24,7 +24,7 @@ class EstimateFullSummaryPageView
             crossAxisAlignment: .start,
             children: [
               Center(child: Image.asset(StaticImg.ellipse)),
-              SizedBox(height: 10.h),
+              SizedBox(height: 15.h),
               Center(
                 child: Text(
                   "Titan Lightening",
@@ -42,7 +42,7 @@ class EstimateFullSummaryPageView
                     (index) => Text(
                       controller.subTitle[index],
                       style: StaticStyle.style(
-                        index == 0 ? 14.sp : 10.sp,
+                        index == 0 ? 16.sp : 14.sp,
                         StaticColors.textPrColor,
                         FontWeight.w400,
                       ),
@@ -53,10 +53,9 @@ class EstimateFullSummaryPageView
               SizedBox(height: 50.h),
               // ===========================Show Details===================
               ShowDetails(),
-              SizedBox(height: 10.h),
-            Obx(() =>  controller.isShowDetails.value? DetailsShow():SizedBox(),),
+              SizedBox(height: 15.h),
+            DetailsShow(),
               // ===========================Msg===================
-              Obx(() => controller.isShowDetails.value?SizedBox(height: 0,): SizedBox(height: 250.h,),),
 
               CustomButton(
                 leftIcon: StaticImg.plus,
@@ -78,7 +77,7 @@ class EstimateFullSummaryPageView
                   );
                 },
                 title:"Send Estimate" ,
-                height: 56.h, // Responsive height
+                height: 66.h, // Responsive height
               ).marginOnly(top: 20,bottom: 10),
             ],
           ).paddingSymmetric(vertical: 50, horizontal: 20),

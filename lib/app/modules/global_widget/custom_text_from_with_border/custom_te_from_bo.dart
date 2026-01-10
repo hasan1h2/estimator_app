@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../../data/utils/static_colors/static_colors.dart';
 import '../../../data/utils/static_style/staticstyle.dart';
 
@@ -22,13 +23,10 @@ class CustomTeFromBo extends StatelessWidget {
     this.maxLines,
     this.validator,
     this.readOnly = false,
-<<<<<<< HEAD
     this.initialValue,
-    this.onChanged, // Ensured it's passed as CrossAxisAlignment
-=======
-    this.initialValue, // Ensured it's passed as CrossAxisAlignment
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
+    this.onChanged,  this.isImprotent=true, // Ensured it's passed as CrossAxisAlignment
   });
+
   final String hintText;
   final String lableText;
   final String? initialValue;
@@ -37,11 +35,9 @@ class CustomTeFromBo extends StatelessWidget {
   final int? maxLines;
   final int borderColor;
   final IconData? iconData;
-<<<<<<< HEAD
-  final ValueChanged<dynamic>? onChanged;
-=======
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
+  final ValueChanged<dynamic>? onChanged; // Updated to ensure proper typing
   final bool prefixIcon;
+  final bool isImprotent;
   final bool isLableText;
   final bool readOnly;
   final int fillColor;
@@ -51,6 +47,7 @@ class CustomTeFromBo extends StatelessWidget {
   final TextEditingController?
   mainController; // Explicitly use TextEditingController
   final FormFieldValidator? validator;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -58,23 +55,34 @@ class CustomTeFromBo extends StatelessWidget {
       children: [
         isLableText
             ? SizedBox()
-            : Text(
-                lableText,
-                style: StaticStyle.style(
-                  14, // Font size
-                  StaticColors.textPrColor, // Text color for the label
-                  FontWeight.w500, // Font weight
-                ),
+            : Row(
+                children: [
+                  Text(
+                    lableText,
+                    style: StaticStyle.style(
+                      17.sp, // Font size
+                      StaticColors.textPrColor, // Text color for the label
+                      FontWeight.w500, // Font weight
+                    ),
+                  ), SizedBox(width: 5.w,),
+                  isImprotent?Center(
+                    child: Text(
+                      '*',
+                      style: StaticStyle.style(
+                        20, // Font size
+                        StaticColors.redColor, // Text color for the label
+                        FontWeight.w500, // Font weight
+                      ),
+                    ).marginOnly(top: 4),
+                  ):SizedBox(),
+                ],
               ),
-        isLableText ? SizedBox(height: 0) : SizedBox(height: 5),
+        isLableText ? SizedBox(height: 0) : SizedBox(height: 15),
         TextFormField(
-<<<<<<< HEAD
-          onChanged: onChanged,
-=======
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
-          initialValue: initialValue,
+          onChanged: onChanged, // Handle changes
+          initialValue: initialValue, // Set initial value
           readOnly: readOnly,
-          maxLines: maxLines ?? 1,
+          maxLines: maxLines ?? 1, // Default to 1 line if not provided
           validator: validator,
           controller: mainController, // Set controller if provided
           decoration: InputDecoration(
@@ -105,9 +113,7 @@ class CustomTeFromBo extends StatelessWidget {
             ),
             prefixIcon: prefixIcon
                 ? Icon(iconData, color: Color(iconColor!))
-                : null,
-
-            // Show icon if passed
+                : null, // Show icon if prefix is enabled
           ),
         ),
       ],

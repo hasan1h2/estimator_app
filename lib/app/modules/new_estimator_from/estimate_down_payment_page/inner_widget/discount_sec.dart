@@ -23,7 +23,7 @@ class DiscountSec extends StatelessWidget {
             margin: EdgeInsets.symmetric(horizontal: 8),
             padding: EdgeInsets.all(15),
             width: 90.w,
-            height: 60.h,
+            height: 68.h,
             decoration: BoxDecoration(
               color: Color(StaticColors.whiteColor),
               borderRadius: BorderRadius.circular(8),

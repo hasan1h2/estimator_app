@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../../../data/utils/static_colors/static_colors.dart';
-import '../../../../data/utils/static_string/static_string.dart';
-import '../../../global_widget/custom_button/custom_button.dart';
-import '../../../global_widget/custom_text_from_with_border/custom_te_from_bo.dart';
-import '../controllers/estimate_add_item1_page_controller.dart';
+import '../../../../../data/utils/static_colors/static_colors.dart';
+import '../../../../../data/utils/static_string/static_string.dart';
+import '../../../../global_widget/custom_button/custom_button.dart';
+import '../../../../global_widget/custom_text_from_with_border/custom_te_from_bo.dart';
+import '../../controllers/estimate_add_item1_page_controller.dart';
 
 class DialogBoxAreaEdit extends StatelessWidget {
   const DialogBoxAreaEdit({super.key});

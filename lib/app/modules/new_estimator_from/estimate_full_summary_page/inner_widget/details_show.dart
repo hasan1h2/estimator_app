@@ -15,7 +15,7 @@ class DetailsShow extends StatelessWidget {
          Text(
            "AAA AAA AAAAA",
            style: StaticStyle.style(
-             13.6.sp,
+             15.6.sp,
              StaticColors.textPrColor,
              FontWeight.w600,
            ),
@@ -23,30 +23,30 @@ class DetailsShow extends StatelessWidget {
          Text(
            "Dhaka 1216",
            style: StaticStyle.style(
-             11.6.sp,
+             14.6.sp,
              StaticColors.textPrColor,
              FontWeight.w400,
            ),
-         ).marginSymmetric(vertical: 5),
+         ).marginSymmetric(vertical: 10),
          Row(
            children: [
              SvgPicture.asset(StaticImg.call, height: 13, width: 13),
-             SizedBox(width: 5.w),
+             SizedBox(width: 7.w),
              Text(
                "453-432-4636",
                style: StaticStyle.style(
-                 11.6.sp,
+                 14.6.sp,
                  StaticColors.textPrColor,
                  FontWeight.w400,
                ),
              ),
            ],
          ),
-         SizedBox(height: 50.h),
+         SizedBox(height: 40.h),
          Text(
            "Services",
            style: StaticStyle.style(
-             13.6.sp,
+             17.6.sp,
              StaticColors.textPrColor,
              FontWeight.w600,
            ),
@@ -56,7 +56,7 @@ class DetailsShow extends StatelessWidget {
              margin: EdgeInsets.symmetric(vertical: 20),
              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
              width: MediaQuery.of(context).size.width,
-             height: 100.h,
+             height: 130.h,
              decoration: BoxDecoration(
                color: Color(StaticColors.whiteColor),
                borderRadius: BorderRadius.circular(10),
@@ -64,14 +64,14 @@ class DetailsShow extends StatelessWidget {
              child: Row(
                crossAxisAlignment: .start,
                children: [
-                 SvgPicture.asset(StaticImg.light),
+                 SvgPicture.asset(StaticImg.light,height: 60,width: 60,),
                  SizedBox(width: 15.w),
                  Column(
                    children: [
                      Text(
                        "Expander Path Lighting",
                        style: StaticStyle.style(
-                         13.6.sp,
+                         17.6.sp,
                          StaticColors.textPrColor,
                          FontWeight.w600,
                        ),
@@ -79,16 +79,16 @@ class DetailsShow extends StatelessWidget {
                      Text(
                        "Lights on the path...ish",
                        style: StaticStyle.style(
-                         11.6.sp,
-                         StaticColors.grayColor,
+                         14.6.sp,
+                         StaticColors.textSeColor,
                          FontWeight.w400,
                        ),
-                     ).marginSymmetric(vertical: 2),
+                     ).marginSymmetric(vertical: 7),
                      Text(
                        "× 15ft loop lead (Qty: 1)",
                        style: StaticStyle.style(
-                         10.6.sp,
-                         StaticColors.grayColor,
+                         14.6.sp,
+                         StaticColors.textSeColor,
                          FontWeight.w400,
                        ),
                      ),
@@ -102,7 +102,7 @@ class DetailsShow extends StatelessWidget {
            child: Text(
              "Price Summary",
              style: StaticStyle.style(
-               13.6.sp,
+               17.6.sp,
                StaticColors.textPrColor,
                FontWeight.w600,
              ),
@@ -115,7 +115,7 @@ class DetailsShow extends StatelessWidget {
              Text(
                "Estimate Total",
                style: StaticStyle.style(
-                 11.6.sp,
+                 14.6.sp,
                  StaticColors.textPrColor,
                  FontWeight.w400,
                ),
@@ -123,7 +123,7 @@ class DetailsShow extends StatelessWidget {
              Text(
                "\$410.00",
                style: StaticStyle.style(
-                 13.6.sp,
+                 15.6.sp,
                  StaticColors.textPrColor,
                  FontWeight.w600,
                ),
@@ -136,7 +136,7 @@ class DetailsShow extends StatelessWidget {
              Text(
                "Discount",
                style: StaticStyle.style(
-                 11.6.sp,
+                 14.6.sp,
                  StaticColors.textPrColor,
                  FontWeight.w400,
                ),
@@ -144,7 +144,7 @@ class DetailsShow extends StatelessWidget {
              Text(
                "\$32.80",
                style: StaticStyle.style(
-                 13.6.sp,
+                 15.6.sp,
                  StaticColors.btnColor,
                  FontWeight.w600,
                ),
@@ -157,7 +157,7 @@ class DetailsShow extends StatelessWidget {
              Text(
                "Balance Due",
                style: StaticStyle.style(
-                 13.6.sp,
+                 14.6.sp,
                  StaticColors.textPrColor,
                  FontWeight.w600,
                ),
@@ -165,18 +165,18 @@ class DetailsShow extends StatelessWidget {
              Text(
                "\$377.20",
                style: StaticStyle.style(
-                 13.6.sp,
+                 15.6.sp,
                  StaticColors.redColor,
                  FontWeight.w600,
                ),
              ),
            ],
-         ).marginOnly(top: 27, bottom: 20, right: 20),
+         ).marginOnly(top: 27, bottom: 25, right: 20),
 
          FittedBox(
            child: Container(
              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-             height: 200.h,
+             height: 220.h,
              width: MediaQuery.of(context).size.width,
              decoration: BoxDecoration(
                borderRadius: BorderRadius.circular(10),
@@ -192,7 +192,7 @@ class DetailsShow extends StatelessWidget {
                  Text(
                    "Payment Terms",
                    style: StaticStyle.style(
-                     11.6.sp,
+                     17.6.sp,
                      StaticColors.downPayTemText,
                      FontWeight.w600,
                    ),
@@ -205,7 +205,7 @@ class DetailsShow extends StatelessWidget {
                      Text(
                        "Down Payment (20%)",
                        style: StaticStyle.style(
-                         11.6.sp,
+                         14.6.sp,
                          StaticColors.downPayTemText,
                          FontWeight.w400,
                        ),
@@ -213,7 +213,7 @@ class DetailsShow extends StatelessWidget {
                      Text(
                        "\$75.44",
                        style: StaticStyle.style(
-                         13.6.sp,
+                         15.6.sp,
                          StaticColors.downPayTemText,
                          FontWeight.w600,
                        ),
@@ -226,7 +226,7 @@ class DetailsShow extends StatelessWidget {
                      Text(
                        "Payment Received",
                        style: StaticStyle.style(
-                         11.6.sp,
+                         14.6.sp,
                          StaticColors.downPayTemText,
                          FontWeight.w400,
                        ),
@@ -234,7 +234,7 @@ class DetailsShow extends StatelessWidget {
                      Text(
                        "\$75.44",
                        style: StaticStyle.style(
-                         13.6.sp,
+                         15.6.sp,
                          StaticColors.downPayTemText,
                          FontWeight.w600,
                        ),
@@ -248,7 +248,7 @@ class DetailsShow extends StatelessWidget {
                      Text(
                        "Remaining Balance",
                        style: StaticStyle.style(
-                         11.9.sp,
+                         14.9.sp,
                          StaticColors.downPayTemText,
                          FontWeight.w600,
                        ),
@@ -256,7 +256,7 @@ class DetailsShow extends StatelessWidget {
                      Text(
                        "\$301.76",
                        style: StaticStyle.style(
-                         13.6.sp,
+                         15.6.sp,
                          StaticColors.downPayTemText,
                          FontWeight.w700,
                        ),
@@ -271,7 +271,7 @@ class DetailsShow extends StatelessWidget {
            child: Container(
              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
              margin: EdgeInsets.symmetric(vertical: 20),
-             height: 80.h,
+             height: 110.h,
              width: MediaQuery.of(context).size.width,
              decoration: BoxDecoration(
                color: Color(StaticColors.downPayMsgBg),
@@ -286,7 +286,7 @@ class DetailsShow extends StatelessWidget {
              child: Text(
                "This is an estimate only; actual pricing may change based on\nchanges to the scope of work requested.",
                style: StaticStyle.style(
-                 10.2.sp,
+                 14.2.sp,
                  StaticColors.downPayMsgBro,
                  FontWeight.w400,
                ),

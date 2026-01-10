@@ -11,7 +11,7 @@ class PriceSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 76.h,
+      height: 92.h,
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Color(StaticColors.whiteColor),
@@ -29,7 +29,7 @@ class PriceSection extends StatelessWidget {
         leading: Text(
           StaticString.estiTotal,
           style: StaticStyle.style(
-            16.sp,
+            20.sp,
             StaticColors.textPrColor,
             FontWeight.w500,
           ),

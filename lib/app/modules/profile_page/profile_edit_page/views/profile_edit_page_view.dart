@@ -12,8 +12,10 @@ import '../../../global_widget/show_dialog/show_dialog.dart';
 import '../../profile_main_page/controllers/profile_main_page_controller.dart';
 import '../controllers/profile_edit_page_controller.dart';
 import '../inner_widget/profile_edit_from.dart';
+
 class ProfileEditPageView extends GetView<ProfileMainPageController> {
   const ProfileEditPageView({super.key});
+
   @override
   Widget build(BuildContext context) {
     // Get the screen width and height using ScreenUtil for responsiveness
@@ -72,29 +74,19 @@ class ProfileEditPageView extends GetView<ProfileMainPageController> {
               SizedBox(height: 14.h),
               // Centered Text (Name)
               Center(
-<<<<<<< HEAD
-                child: Obx(() => Text(
-                  controller.comNameVal.value,
-=======
                 child: Text(
-                 controller.comNameVal.value,
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
+                  controller.comNameVal.value,
                   style: StaticStyle.style(
                     20.sp,  // Using ScreenUtil for text scaling
                     StaticColors.textPrColor,
                     FontWeight.w600,
                   ),
-<<<<<<< HEAD
-                ),)
-=======
                 ),
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
               ),
 
               SizedBox(height: 50.h),
 
               // ProfileEditForm (Custom Widget)
-<<<<<<< HEAD
               ProfileEditFrom(
                 comName: comName,
                 phoneNumber: phoneNum,
@@ -102,9 +94,6 @@ class ProfileEditPageView extends GetView<ProfileMainPageController> {
                 webSite: webSite,
                 comAdd: address,
               ),
-=======
-              ProfileEditFrom(comName: comName, phoneNumber: phoneNum, emailAdd: email, webSite: webSite, comAdd: address,),
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 
               SizedBox(height: 50.h),
 
@@ -118,20 +107,12 @@ class ProfileEditPageView extends GetView<ProfileMainPageController> {
                 bgColor: StaticColors.itemBgColor1,
                 fColor: StaticColors.whiteColor,
                 onTap: () {
-<<<<<<< HEAD
-              controller.saveOnTap();
-                 ShowDialog.showCustomDialog(
-                    context,
-                    heading: 'Successfully Update Profile',
-                    seBtnTitle: 'Ok',
-                    onTap2: () => Get.toNamed(Routes.PROFILE_MAIN_PAGE),
-=======
+                  // Save Profile Changes and Show Confirmation Dialog
                   ShowDialog.showCustomDialog(
                     context,
                     heading: 'Successfully Update Profile',
                     seBtnTitle: 'Ok',
-                    onTap2: () => Get.toNamed(Routes.MAIN_PAGE),
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
+                    onTap2: () => Get.toNamed(Routes.MAIN_PAGE),  // Navigate to MAIN_PAGE
                     onlySuccesMsg: true,
                     isSuccess: true,
                   );
@@ -146,14 +127,3 @@ class ProfileEditPageView extends GetView<ProfileMainPageController> {
     );
   }
 }
-
-
-
-// TextFormField(
-// initialValue: comName,  // Setting initial value from ProfilePage
-// decoration: InputDecoration(labelText: 'Company Name'),
-// onChanged: (value) {
-// controller.comNameVal.value = value;
-// },
-// ),
-

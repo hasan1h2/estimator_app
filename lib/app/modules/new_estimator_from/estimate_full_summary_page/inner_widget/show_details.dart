@@ -14,34 +14,12 @@ class ShowDetails extends GetView<EstimateFullSummaryPageController> {
         Text(
           "Estimate For",
           style: StaticStyle.style(
-            11.9.sp,
+            16.9.sp,
             StaticColors.textPrColor,
             FontWeight.w600,
           ),
         ),
-        GestureDetector(
-          onTap: () => controller.togShowDet(),
-          child: Row(
-            children: [
-              Text(
-                "Show Details",
-                style: StaticStyle.style(
-                  11.9.sp,
-                  StaticColors.redColor,
-                  FontWeight.w600,
-                ),
-              ),
-              Obx(
-                () => Icon(
-                  controller.isShowDetails.value
-                      ?  Icons.keyboard_arrow_up_outlined
-                      :Icons.keyboard_arrow_down_outlined ,
-                  color: Color(StaticColors.redColor),
-                ),
-              ),
-            ],
-          ),
-        ),
+
       ],
     );
   }

@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:task_manager/app/modules/main_from/widget/sub_form_mode.dart';
+import '../inner_widget/add_item_full_from/add_item_full_from.dart';
 
 class MainFormModel {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController nameController = TextEditingController();
-  final RxList<SubFormModel> subForms = <SubFormModel>[].obs;
+  final RxList<Widget> itemForms = <Widget>[].obs; // List to store item forms
 
-  // Add sub form
-  void addSubForm() {
-    subForms.add(SubFormModel());
-  }
-
-  // Remove sub form safely
-  void removeSubForm(int index) {
-    final removed = subForms.removeAt(index); // remove first
-    removed.dispose(); // then dispose
+  // Add item form dynamically
+  void addItemForm(int index) {
+    late Widget itemWidget;
+    itemWidget = AddItemFullFrom(index: index,
+      onDelete: () {
+        itemForms.remove(itemWidget);
+      },
+    );
+    itemForms.add(itemWidget);
   }
 
   // Dispose all controllers
   void dispose() {
     nameController.dispose();
-    for (var s in subForms) {
-      s.dispose();
-    }
   }
 }

@@ -60,6 +60,7 @@ class StaticString {
   static final String upLogo = "Upload Logo";
   static final String phFormate = "PNG, JPG or GIF (max. 2MB)";
   static final String sComBtn = "Save Company info ";
+  static final String saveC = "Save & Continue ";
   static final String saveChanBtn = "Save Changes ";
 
   // --------------------------  New Estimate   Page Text----------------------------
@@ -70,8 +71,8 @@ class StaticString {
   static final List<Map<String, dynamic>> newEstVal = [
     {'title': newEst, 'icon': StaticImg.plus},
     {'title': addPro, 'icon': StaticImg.plus},
-    {'title': customer, 'icon': StaticImg.plus},
-    {'title': settings, 'icon': StaticImg.plus},
+    {'title': customer, 'icon': StaticImg.customer},
+    {'title': settings, 'icon': StaticImg.settings},
   ];
 
   static final List<String> gradelist = [
@@ -214,6 +215,8 @@ class StaticString {
   // ===============================Estimate Options==================
   static final String estimateOp = "Estimate Options";
   static final String saveEst = "Save Estimate";
+  static final String savePre = "Save & Preview";
+  static final String prevWiSaving = "Preview without Saving";
   static final String defDownPay = "Default Down Payment %";
   static final String defDownPayHint =
       "Default percentage for down payment requests";

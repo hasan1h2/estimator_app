@@ -64,11 +64,6 @@ class DropdownButton1 extends StatelessWidget {
               2,
                   (index) => GestureDetector(
                 onTap: () {
-
-                  if(index==0){
-                    controller.toggleSubProPho();
-                    print(controller.toggleSubProPho.value);
-                  }
                   if(index==1){
                     controller.toggleSubOp();
                     print(controller.toggleSubOp.value);

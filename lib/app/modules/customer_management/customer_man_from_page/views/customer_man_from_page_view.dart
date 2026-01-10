@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../../data/utils/static_colors/static_colors.dart';
-<<<<<<< HEAD
 import '../../../../data/utils/static_img/static_img.dart';
-=======
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 import '../../../../data/utils/static_string/static_string.dart';
 import '../../../../routes/app_pages.dart';
 import '../../../global_widget/add_tow_btn_row/add_btn.dart';
@@ -17,6 +14,7 @@ import '../inner_widget/customar_from.dart';
 
 class CustomerManFromPageView extends GetView<CustomerManFromPageController> {
   const CustomerManFromPageView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -24,42 +22,35 @@ class CustomerManFromPageView extends GetView<CustomerManFromPageController> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              CustomarFrom(),
-              SizedBox(height: 40.h),
+              CustomarFrom(),  // Custom form widget for customer details
+              SizedBox(height: 40.h),  // Spacing
+
+              // Add buttons for saving or canceling
               AddBtn(
                 onTap1: () {
-<<<<<<< HEAD
-                  Get.toNamed(Routes.MAIN_PAGE);
+                  bool valid = controller.saveOnTap();  // Validate the form
+                  if (valid) {
+                    // If form is valid, navigate to the MAIN_PAGE
+                    ShowDialog.showCustomDialog(
+                      context,
+                      heading: 'Successfully updated',  // Success message heading
+                      seBtnTitle: 'Ok',  // Button title for OK
+                      onTap2: () => Get.toNamed(Routes.MAIN_PAGE),  // Navigate to MAIN_PAGE
+                      isSuccess: true,  // Mark as a success dialog
+                      onlySuccesMsg: true,  // Only show success message
+                      lotiImg: StaticImg.success,  // Lottie animation for success
+                    );
+                  }
                 },
                 onTap2: () {
-                  bool valid= controller.saveOnTap();
-                  valid? ShowDialog.showCustomDialog(
-                    context,
-                    heading: 'Succesfully update',
-                    seBtnTitle: 'Ok',
-                    onTap2: () =>  Get.toNamed(Routes.MAIN_PAGE),
-                    isSuccess: true,onlySuccesMsg: true,
-                    lotiImg: StaticImg.success,
-                  ):null;
-
-
-
-                },
-                fastBtnTitle:StaticString.cancel,
-                secBtnTitle: StaticString.saveCustomer ,
-=======
-                bool valid= controller.saveOnTap();
-                 valid? Get.toNamed(Routes.MAIN_PAGE):null;
-                },
-                onTap2: () {
+                  // Cancel action, just go back
                   Get.back();
                 },
-                fastBtnTitle: StaticString.saveCustomer,
-                secBtnTitle: StaticString.cancel,
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
+                fastBtnTitle: StaticString.cancel,  // Cancel button title
+                secBtnTitle: StaticString.saveCustomer,  // Save button title
               ),
             ],
-          ).paddingOnly(top: 98, left: 20, right: 20, bottom: 80),
+          ).paddingOnly(top: 98, left: 20, right: 20, bottom: 80),  // Padding around the content
         ),
       ),
     );

@@ -68,10 +68,10 @@ class MyDropdownButton extends StatelessWidget {
                     (index) => GestureDetector(
                   onTap: () {
       
-                    if(index==0){
-                      controller.toggleProPhoto();
-                      print(controller.toggleProPhoto.value);
-                    }
+                    // if(index==0){
+                    //   controller.toggleProPhoto();
+                    //   print(controller.toggleProPhoto.value);
+                    // }
                     if(index==1){
                       controller.toggleSubServ();
                       print(controller.toggleSubServ.value);

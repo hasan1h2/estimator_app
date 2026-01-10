@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-import '../../../../data/utils/static_colors/static_colors.dart';
-import '../../../../data/utils/static_img/static_img.dart';
-import '../../../../data/utils/static_style/staticstyle.dart';
-import 'dialog_box_area_edit.dart';
+import '../../../../../data/utils/static_colors/static_colors.dart';
+import '../../../../../data/utils/static_img/static_img.dart';
+import '../../../../../data/utils/static_style/staticstyle.dart';
+import '../dialog_box_area_edit/dialog_box_area_edit.dart';
 
 class AreaSection extends StatelessWidget {
   const AreaSection({super.key, this.controller});
@@ -20,7 +20,7 @@ class AreaSection extends StatelessWidget {
         Expanded(
             child: Obx(() => Container(
               width: 335.w,
-              height: 35.h,
+              height: 45.h,
               decoration: BoxDecoration(
                 color: Color(StaticColors.itemBgColor1),
                 borderRadius: BorderRadius.circular(8),

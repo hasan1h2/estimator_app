@@ -18,12 +18,12 @@ class SubServicePro extends StatelessWidget {
           Text(
             StaticString.subServicePro,
             style: StaticStyle.style(
-              14.sp,
+              16.sp,
               StaticColors.textPrColor,
               FontWeight.w500,
             ),
           ),
-          SizedBox(height: 2.h),
+          SizedBox(height: 15.h),
           DropdownButton1(controller: controller),
         ],
       ),

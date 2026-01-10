@@ -17,14 +17,14 @@ class SubServiceOp extends StatelessWidget {
         crossAxisAlignment: .start,
         children: [
           Text(
-            StaticString.subServicePro,
+            StaticString.selServOp,
             style: StaticStyle.style(
-              14.sp,
+              16.sp,
               StaticColors.textPrColor,
               FontWeight.w500,
             ),
           ),
-          SizedBox(height: 2.h),
+          SizedBox(height: 15.h),
           DropdownButton2(controller: controller,),
         ],
       ),

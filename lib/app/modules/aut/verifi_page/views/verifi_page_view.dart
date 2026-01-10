@@ -1,10 +1,13 @@
 import 'package:estimatorapp/app/data/utils/static_img/static_img.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
 import 'package:smart_auth/smart_auth.dart';
 import '../../../../data/utils/static_colors/static_colors.dart';
 import '../../../../data/utils/static_string/static_string.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
+import '../../../../routes/app_pages.dart';
+import '../../../global_widget/app_bar/app_bar.dart';
 import '../../../global_widget/custom_button/custom_button.dart';
 
 class VerifiPageView extends StatefulWidget {
@@ -71,11 +74,14 @@ class _VerifiPageViewState extends State<VerifiPageView> {
             child: Padding(
               padding: const EdgeInsets.all(40.0),
               child: Column(
+
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  CustomAppBar( onTap: () { Get.toNamed(Routes.SIN_IN_PAGE); },).marginOnly(bottom: 50),
+
                   Center(
                     child: Padding(
-                      padding: EdgeInsets.only(top: 56),
+                      padding: EdgeInsets.only(top: 26),
                       child: Text(
                         StaticString.verificationHa,
                         style: TextStyle(
@@ -99,7 +105,7 @@ class _VerifiPageViewState extends State<VerifiPageView> {
                     ),
                   ),
 
-                  SizedBox(height: 59),
+                  SizedBox(height: 29),
                   Pinput(
                     length: 6,
                     smsRetriever: smsRetriever,

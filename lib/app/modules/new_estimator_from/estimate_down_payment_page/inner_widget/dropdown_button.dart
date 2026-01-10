@@ -15,7 +15,7 @@ class DropdownBtnDiscount extends StatelessWidget {
 
     return Obx(
           () => CustomDropdownButton2(
-            buttonHeight: 60.h,
+            buttonHeight: 68.h,
                   iconSize: 20,
                   hint: StaticString.emHint,
                   buttonWidth: screenWidth,

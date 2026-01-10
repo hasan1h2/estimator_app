@@ -6,15 +6,12 @@ import '../../../../data/utils/static_colors/static_colors.dart';
 import '../../../../data/utils/static_img/static_img.dart';
 import '../../../../data/utils/static_style/staticstyle.dart';
 import '../../../../routes/app_pages.dart';
-<<<<<<< HEAD
 import '../../../global_widget/show_dialog/show_dialog.dart';
 import '../controllers/profile_main_page_controller.dart';
 
-=======
-import '../controllers/profile_main_page_controller.dart';
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
 class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
   const PhotoAndEditbtnSec({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -33,7 +30,7 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
             alignment: Alignment.center,
             children: [
               CircleAvatar(
-                radius: 40, // Adjust size as needed
+                radius: 40,  // Adjust size as needed
                 backgroundImage: AssetImage(
                   StaticImg.ellipse,
                 ), // Use your image
@@ -58,63 +55,23 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
             ],
           ),
           SizedBox(height: 14.h),
-<<<<<<< HEAD
+          // Displaying company name reactively
           Obx(
-            () => Text(
+                () => Text(
               controller.comNameVal.value,
               style: StaticStyle.style(
-                20.sp, // Using ScreenUtil for text scaling
+                20.sp,  // Using ScreenUtil for text scaling
                 StaticColors.textPrColor,
                 FontWeight.w600,
               ),
-=======
-          Text(
-            controller.comNameVal.value,
-            style: StaticStyle.style(
-              20.sp, // Using ScreenUtil for text scaling
-              StaticColors.textPrColor,
-              FontWeight.w600,
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
             ),
           ),
           SizedBox(height: 10.h),
           SizedBox(
             width: 160.w,
-<<<<<<< HEAD
             child: ElevatedButton(
               onPressed: () {
-                ShowDialog.showCustomDialog(
-                  context,
-                  heading: 'Do you want to edit profile?',
-                  seBtnTitle: 'Ok',
-                  fBtnTitle: 'Cancel',
-                  onTap1:() => Get.back() ,
-                  onTap2:  () {
-                    // Edit Profile
-                    Get.toNamed(
-                      Routes.PROFILE_EDIT_PAGE,
-                      arguments: {
-                        'comName': controller.comNameVal.value,
-                        'email': controller.emailVal.value,
-                        'phoneNum': controller.phoneNumVal.value,
-                        'address': controller.addressVal.value,
-                        'webSite': controller.webSiteVal.value,
-                      },
-                    );
-                  },
-                  isSuccess: true,
-                  lotiImg: StaticImg.editLoti,
-                );
-
-
-
-              },
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 12.h),
-=======
-           child:  ElevatedButton(
-              onPressed: () {
-                // Edit Profile
+                // Navigate to edit profile page with the current data
                 Get.toNamed(Routes.PROFILE_EDIT_PAGE, arguments: {
                   'comName': controller.comNameVal.value,
                   'email': controller.emailVal.value,
@@ -124,16 +81,11 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
                 });
               },
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 30.w,
-                  vertical: 12.h,
-                ),
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
+                padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 12.h),
                 backgroundColor: Color(StaticColors.itemBgColor1),
               ),
               child: Row(
                 children: [
-<<<<<<< HEAD
                   Text(
                     'Edit Profile',
                     style: StaticStyle.style(
@@ -142,13 +94,6 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
                       FontWeight.w600,
                     ),
                   ),
-=======
-                  Text('Edit Profile', style: StaticStyle.style(
-                    14.sp,
-                    StaticColors.whiteColor,
-                    FontWeight.w600,
-                  ),),
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
                   SizedBox(width: 10.w),
                   SvgPicture.asset(
                     StaticImg.edit,
@@ -162,10 +107,6 @@ class PhotoAndEditbtnSec extends GetView<ProfileMainPageController> {
                 ],
               ),
             ),
-<<<<<<< HEAD
-=======
-
->>>>>>> 4c40ee6c8166c0349e54547120b470a543411840
           ),
         ],
       ),
